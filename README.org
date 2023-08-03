@@ -1,0 +1,120 @@
+* NixOS Configuration With Flakes, Home-manager
+
+** Basic Concept
+
+My setup is using the =flake.nix= as a central point. As you can see
+in =nixos-rebuild_switch_flake.sh=, I do update my setup using the
+command:
+
+: sudo nixos-rebuild switch --flake /home/vk/nixos
+
+You may need to adapt the path to meet your username, of course.
+
+=flake.nix= is calling most of the other files depending on the set hostname:
+
+- =hosts/$HOSTNAME/default.nix=
+- =configuration.nix=
+- all files related to =home-manager=: =homemanager.nix= and =homemanager/*=
+
+The directory =assets= contain various configuration and binary files
+I wanted to keep close to my NixOS configuration files.
+
+** Hosts
+
+As of 2023-07-29, I do have three different hosts running NixOS:
+
+*floyd* is my personal notebook which I was using to test NixOS
+without affecting my main systems that are running Xubuntu LTS or
+Debian stable.
+
+*nixosvmr* and *nixosvms* are two qemu virtual machines in order to
+test multi-host setup or to play with my NixOS configuration without
+having floyd around.
+
+** Installation
+
+1) Download installer ISO                                                           :focus:
+   - https://nixos.org/download.html#nixos-iso
+     - Don't use the "Minimal ISO" since it might not come with some GUI stuff we need.
+     - I was using "GNOME 64 Bit"
+       - [2023-07-29 Sat] I used: https://channels.nixos.org/nixos-23.05/latest-nixos-gnome-x86_64-linux.iso
+
+2) Install NixOS using that ISO
+   - Learn how to set up a USB thumb drive and boot from it for installing the basic OS
+
+3) Modify default configuration.nix:
+
+   1. Start an editor:
+     : sudo nano /etc/nixos/configuration.nix
+
+   2. Change hostname on new host from default if necessary:
+      - https://borretti.me/article/nixos-for-the-impatient#postinstall
+        - by setting =networking.hostName= from "nixos" to a new hostname
+  
+   3. Activate flakes: https://nixos.wiki/wiki/Flakes
+      "On NixOS set the following options in =configuration.nix= and run =nixos-rebuild="
+    
+      #+begin_src nix
+      { pkgs, ... }: {   # usual, this line is already there
+  
+        nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+      }                  # usual, this line is already there
+      #+end_src
+
+   4. OPTIONALLY: Install packages like vim, sshd, flakes, git in case you need to play around more or download repo via =git clone=
+
+   5. Update and activate your setup
+      : sudo nixos-rebuild switch
+
+4) Get git repo via (=scp= or =git clone=)
+
+   - target directory: =~/nixos/nixos-configuration=
+     - I'm using following command at my LAN:
+       : scp -r vk@192.168.2.42:src/nixos-configuration .
+  
+5) Create a configuration for the =$HOSTNAME= in the nixos-configuration git repo
+
+   1. Adapt =flakes.nix=
+   2. Create =~/nixos/hosts/$HOSTNAME= (from an existing host as template)
+   3. Get the =hardware-configuration.nix= into your new setup
+      #+BEGIN_SRC sh
+      cd ~/nixos
+      cp /etc/nixos/hardware-configuration.nix ~/nixos/hosts/$HOSTNAME/
+      #+END_SRC
+
+6) *Check for things that won't work or need attention when you're not Karl Voit*:
+
+   - Check out all spots marked with "SPECIFICTOKARL" for things that are different on your side:
+     : git grep -B 1 -A 2 SPECIFICTOKARL
+     - =flake.nix=: =description=, =system.stateVersion=, username "vk", ...
+
+   - Check out all spots marked with "FIXXME" for things that may need attention to fix:
+     : git grep -B 1 -A 2 FIXXME
+
+   - Check out all spots marked with "DEPENDENCY" for things that are referring to stuff which is *not available in this NixOS repository*:
+     : git grep -B 1 -A 2 DEPENDENCY
+     - Usually, you might want to get rid of those things because the would result in errors in your situation.
+
+
+1) Run flakes with the new setup:
+
+   1. Switch to nixos-config dir
+
+   2. Double-check: make sure that hostname matches a config
+
+   3. Run flakes with current nixos-config dir:
+      : sudo nixos-rebuild switch --flake .
+
+   4. Fix any error that may arise at this point.
+      - Yes, this can be frustrating. I wish you good luck here.
+
+   5. Execute store optimization (replacing copies with hardlinks):
+      : nix-store --optimise
+
+   6. OPTIONALLY: Symlink =/etc/nixos= to =~/nixos= if you want to use =nixos-rebuild= without the optional parameter for the path.
+
+** License
+
+If not specified otherwise, this configuration is licensed under a
+[[http://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution-ShareAlike 4.0 International License]]

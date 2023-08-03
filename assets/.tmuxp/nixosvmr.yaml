@@ -1,0 +1,16 @@
+session_name: 'floydvk'
+windows:
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/src/nixos-configuration
+  window_name: nixos-config1
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/src/nixos-configuration
+  window_name: nixos-config2

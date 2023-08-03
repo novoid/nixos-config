@@ -1,0 +1,38 @@
+session_name: 's'
+start_directory: /home/vk/tmp/s
+windows:
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  window_name: s
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  window_name: s
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: archive/new
+  window_name: new
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: top48hrs
+  window_name: top48hrs
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: ~/share/rise/s/raws
+  window_name: raws
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: archive/new/postprocessing
+  window_name: postprocessing

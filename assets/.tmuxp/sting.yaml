@@ -1,0 +1,33 @@
+session_name: 'stingvk'
+windows:
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/tmp/2del
+  window_name: 2del
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/archive/ablegen/mediathekview
+  window_name: MediathekView
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/src/lazyblorg
+  window_name: lazyblorg
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/share/rise/youtube
+  window_name: YouTube
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/tmp/digicam/pixel4a
+  window_name: Pixel 4a
