@@ -151,19 +151,19 @@
         "plugins/plugin-4/miniature-view" = false; # show name instead of preview
         "plugins/plugin-4/numbering" = false;
         "plugins/plugin-4/workspace-scrolling" = false;
-        # screenshooter
+        # screenshooter (if order of this item is changed → also change order of symlink below: "files in ~/.config/")
         "plugins/plugin-5" = "screenshooter";
         # Separator
         "plugins/plugin-6" = "separator";
         "plugins/plugin-6/style" = 0; # transparent
         # Sys tray
         "plugins/plugin-7" = "systray";
-        # CPU graph
+        # CPU graph (if order of this item is changed → also change order of symlink below: "files in ~/.config/")
         "plugins/plugin-8" = "cpugraph";
         # Pulse audio
         "plugins/plugin-9" = "pulseaudio";
         "plugins/plugin-9/enable-keyboard-shortcuts" = true;
-        # Network monitor
+        # Network monitor (if order of this item is changed → also change order of symlink below: "files in ~/.config/")
         "plugins/plugin-10" = "netload";
         # clipboard
         "plugins/plugin-11" = "xfce4-clipman-plugin";
@@ -519,16 +519,13 @@
     }; # xfconf.settings
 
     
-    # FIXXME: symlink ~/src/nixos-configuration/.themes/Adwaita-dark-Xfce to ~/.themes/
-    
     # files in ~/
-    #home.file.".config/testsymlink1".source = ../.config/testdir/testsymlink1.txt;
     home.file.".themes/Adwaita-dark-Xfce".source = ../assets/.themes/Adwaita-dark-Xfce;
-    
+
     # files in ~/.config/
-#    xdg.configFile."testsymlink1.txt".source = ../.config/testdir/testsymlink1.txt;
+    # 2023-08-06: following xfce panel plugins can't be configured via xfconf. Therefore, I just overwrite my personal settings via file:
     xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../assets/.config/xfce4/panel/screenshooter-x.rc;
     xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../assets/.config/xfce4/panel/cpugraph-x.rc;
     xdg.configFile."xfce4/panel/netload-10.rc".source = ../assets/.config/xfce4/panel/netload-x.rc;
-  
+    
 }
