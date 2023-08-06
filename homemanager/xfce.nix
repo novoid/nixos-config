@@ -127,12 +127,8 @@
         "panels/panel-1/enable-struts" = true;
         "panels/panel-1/position-locked" = true;
         "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 ];
-        # Application menu
-        "plugins/plugin-1" = "applicationsmenu";
-        "plugins/plugin-1/button-icon" = "windows";
-        "plugins/plugin-1/button-title" = "";
-        "plugins/plugin-1/show-button-title" = true;
-        "plugins/plugin-1/show-menu-icons" = true;
+        # Application menu = whiskermenu
+        "plugins/plugin-1" = "whiskermenu";
         # Tasklist
         "plugins/plugin-2" = "tasklist";
         "plugins/plugin-2/grouping" = false;
@@ -155,47 +151,42 @@
         "plugins/plugin-4/miniature-view" = false; # show name instead of preview
         "plugins/plugin-4/numbering" = false;
         "plugins/plugin-4/workspace-scrolling" = false;
+        # screenshooter
+        "plugins/plugin-5" = "screenshooter";
         # Separator
-        "plugins/plugin-5" = "separator";
-        "plugins/plugin-5/style" = 0; # transparent
-        # Pulse audio
-        "plugins/plugin-6" = "pulseaudio";
-        "plugins/plugin-6/enable-keyboard-shortcuts" = true;
+        "plugins/plugin-6" = "separator";
+        "plugins/plugin-6/style" = 0; # transparent
         # Sys tray
         "plugins/plugin-7" = "systray";
-        # Power manager
-        "plugins/plugin-8" = "power-manager-plugin";
-        # Notification
-        "plugins/plugin-9" = "notification-plugin";
-        # screenshooter
-        "plugins/plugin-10" = "screenshooter";
-        # Separator
-        "plugins/plugin-11" = "separator";
-        "plugins/plugin-11/style" = 0; # transparent
-        # Clock
-        "plugins/plugin-12" = "clock";
-        "plugins/plugin-12/digital-layout" = 3; # Time Only
-        "plugins/plugin-12/digital-time-font" = "Sans 8";
-        #"plugins/plugin-12/digital-date-font" = "Noto Sans 10";
-        #"plugins/plugin-12/digital-date-format" = "%A %d %R";
-        "plugins/plugin-12/digital-time-format" = "%A %d %R";
-        "plugins/plugin-12/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
-        "plugins/plugin-12/mode" = 2; # digital
-        "plugins/plugin-12/show-frame" = false;
-        # 
-        "plugins/plugin-13" = "whiskermenu";
-
-        "plugins/plugin-14" = "cpugraph";
-
-        "plugins/plugin-15" = "netload";
-
-        "plugins/plugin-16" = "eyes";
-        
+        # CPU graph
+        "plugins/plugin-8" = "cpugraph";
+        # Pulse audio
+        "plugins/plugin-9" = "pulseaudio";
+        "plugins/plugin-9/enable-keyboard-shortcuts" = true;
+        # Network monitor
+        "plugins/plugin-10" = "netload";
         # clipboard
-        #"plugins/plugin-17" = "xfce4-clipman-plugin";
+        "plugins/plugin-11" = "xfce4-clipman-plugin";
         "plugins/clipman/settings/save-on-quit" = true;
         "plugins/clipman/settings/max-texts-in-history" = 1000;
         "plugins/clipman/settings/add-primary-clipboard" = false;
+        # Notification
+        "plugins/plugin-12" = "notification-plugin";
+        # Separator
+        "plugins/plugin-13" = "separator";
+        "plugins/plugin-13/style" = 0; # transparent
+        # Power manager
+        "plugins/plugin-14" = "power-manager-plugin";
+        # Clock
+        "plugins/plugin-15" = "clock";
+        "plugins/plugin-15/digital-layout" = 3; # Time Only
+        "plugins/plugin-15/digital-time-font" = "Sans 8";
+        "plugins/plugin-15/digital-time-format" = "%A %d %R";
+        "plugins/plugin-15/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
+        "plugins/plugin-15/mode" = 2; # digital
+        "plugins/plugin-15/show-frame" = false;
+        # Eyes: where's my mouse cursor?
+        "plugins/plugin-16" = "eyes";
       }; # xfce4-panel        
       
       
@@ -536,5 +527,8 @@
     
     # files in ~/.config/
 #    xdg.configFile."testsymlink1.txt".source = ../.config/testdir/testsymlink1.txt;
+    xdg.configFile."xfce4/panel/screenshooter-x.rc".source = ../.config/xfce4/panel/screenshooter-5.rc;
+    xdg.configFile."xfce4/panel/cpugraph-x.rc".source = ../.config/xfce4/panel/cpugraph-8.rc;
+    xdg.configFile."xfce4/panel/netload-x.rc".source = ../.config/xfce4/panel/netload-10.rc;
   
 }

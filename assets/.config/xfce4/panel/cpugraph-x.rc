@@ -1,0 +1,16 @@
+TimeScale=0
+Size=40
+Frame=0
+Border=0
+Bars=1
+PerCore=0
+TrackedCore=0
+InTerminal=0
+StartupNotification=1
+ColorMode=0
+UpdateInterval=1
+Command=xfce4-taskmanager
+Background=rgb(0,0,0)
+Foreground1=rgb(255,255,255)
+BarsColor=rgb(255,255,255)
+
