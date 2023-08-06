@@ -419,11 +419,16 @@
         "/xfce4-power-manager/dpms-enabled" = true;
         "/xfce4-power-manager/dpms-on-ac-off" = 0;
         "/xfce4-power-manager/dpms-on-ac-sleep" = 0;
-        "/xfce4-power-manager/handle-brightness-keys" = true; # FIXXME: doesn't work on floyd yet
         "/xfce4-power-manager/lock-screen-suspend-hibernate" = true;
-        "/xfce4-power-manager/power-button-action" = 3;
         "/xfce4-power-manager/show-tray-icon" = 1;
-        #"/xfce4-power-manager/show-tray-icon" = true;
+
+        "/xfce4-power-manager/handle-brightness-keys" = true; # FIXXME: doesn't work on floyd yet
+        "/xfce4-power-manager/power-button-action" = 3; # Ask
+        "/xfce4-power-manager/lid-action-on-battery" = 0; # just blank screen
+        "/xfce4-power-manager/lid-action-on-ac" = 0; # just blank screen
+        "/xfce4-power-manager/logind-handle-lid-switch" = false;
+        "/xfce4-power-manager/critical-power-action" = 3; # Ask
+
       }; # xfce4-power-manager
 
       
