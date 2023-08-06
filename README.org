@@ -67,11 +67,11 @@ having floyd around.
    5. Update and activate your setup
       : sudo nixos-rebuild switch
 
-4) Get git repo via (=scp= or =git clone=)
+4) Get git repo via (=scp= or =git clone https://github.com/novoid/nixos-config.git ~/nixos=)
 
    - target directory: =~/nixos/nixos-configuration=
      - I'm using following command at my LAN:
-       : scp -r vk@192.168.2.42:src/nixos-configuration .
+       : scp -r vk@192.168.2.42:src/nixos-configuration ~/ && mv ~/nixos-configuration ~/nixos
   
 5) Create a configuration for the =$HOSTNAME= in the nixos-configuration git repo
 
@@ -96,8 +96,7 @@ having floyd around.
      : git grep -B 1 -A 2 DEPENDENCY
      - Usually, you might want to get rid of those things because the would result in errors in your situation.
 
-
-1) Run flakes with the new setup:
+7) Run flakes with the new setup:
 
    1. Switch to nixos-config dir
 
@@ -113,6 +112,28 @@ having floyd around.
       : nix-store --optimise
 
    6. OPTIONALLY: Symlink =/etc/nixos= to =~/nixos= if you want to use =nixos-rebuild= without the optional parameter for the path.
+
+** Setup GitHub ssh authentication
+:PROPERTIES:
+:CREATED:  [2023-08-06 Sun 21:11]
+:END:
+
+- [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][Source]] 
+
+-----
+
+1. execute
+   : ssh-keygen -t ed25519 -C "github.$HOST@karl-voit.at"
+   - This creates a new SSH key, using the provided email as a label.
+2. At the prompt, type a secure passphrase.
+3. Choose a file name:
+   : ~/.ssh/id_ed25519_GitHub_$HOST
+4. adding to ssh-agend:
+   : ssh-add ~/.ssh/id_ed25519_GitHub_$HOST
+5. visit https://github.com/settings/keys
+6. click on "New SSH key"
+7. inser a name and paste the content of the following file:
+   : ~/.ssh/id_ed25519_GitHub_$HOST.pub
 
 ** License
 
