@@ -527,8 +527,8 @@
     
     # files in ~/.config/
 #    xdg.configFile."testsymlink1.txt".source = ../.config/testdir/testsymlink1.txt;
-    xdg.configFile."xfce4/panel/screenshooter-x.rc".source = ../.config/xfce4/panel/screenshooter-5.rc;
-    xdg.configFile."xfce4/panel/cpugraph-x.rc".source = ../.config/xfce4/panel/cpugraph-8.rc;
-    xdg.configFile."xfce4/panel/netload-x.rc".source = ../.config/xfce4/panel/netload-10.rc;
+    xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../assets/.config/xfce4/panel/screenshooter-x.rc;
+    xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../assets/.config/xfce4/panel/cpugraph-x.rc;
+    xdg.configFile."xfce4/panel/netload-10.rc".source = ../assets/.config/xfce4/panel/netload-x.rc;
   
 }
