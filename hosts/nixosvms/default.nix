@@ -88,7 +88,7 @@
       folders = {
         "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
           id = "nixos-configuration";
-          path = "/home/vk/nixos/nixos-configuration";    # Which folder to add to Syncthing
+          path = "/home/vk/nixos";    # Which folder to add to Syncthing
           devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
         };
        
