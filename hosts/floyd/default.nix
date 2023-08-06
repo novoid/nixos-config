@@ -84,13 +84,13 @@
         #"" = { id = ""; };
         #"" = { id = ""; };
       };
-      folders = {
-        "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
-          path = "/home/vk/nixos";    # Which folder to add to Syncthing
-          devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
-        };
-       
-      };
+      # folders = {
+      #   "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
+      #     path = "/home/vk/nixos";    # Which folder to add to Syncthing
+      #     devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
+      #   };
+      #  
+      # }; # folders
     };
   };
   ## # Syncthing ports
