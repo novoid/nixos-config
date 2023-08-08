@@ -38,6 +38,7 @@
 
       element-desktop # Matrix-client
       xorg.xeyes
+      dosbox
       
     ];
 

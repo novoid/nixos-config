@@ -13,6 +13,7 @@
       htop
       dnsutils
       mtr  # network diagnostic
+      mc  #midnight commander
       ncdu
       nmap
       whois
