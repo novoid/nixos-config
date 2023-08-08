@@ -134,6 +134,8 @@ having floyd around.
 6. click on "New SSH key"
 7. inser a name and paste the content of the following file:
    : ~/.ssh/id_ed25519_GitHub_$HOST.pub
+8. load the key into the ssh-agent:
+   : ssh-add ~/.ssh/id_ed25519_GitHub_$HOST
 
 ** License
 
