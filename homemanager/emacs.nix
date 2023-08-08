@@ -30,6 +30,7 @@
     xdotool
     xorg.xprop
     xorg.xwininfo
+    gnuplot
     
   ];
 
