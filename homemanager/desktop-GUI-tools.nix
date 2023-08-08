@@ -40,6 +40,7 @@
       xorg.xeyes
       dosbox
       gnome.gnome-terminal
+      libnotify
       
     ];
 
