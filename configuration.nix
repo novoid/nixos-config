@@ -38,8 +38,19 @@
   services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.displayManager = {
+    lightdm.enable = true;
+    
+    # auto-start a few apps on xfce startup:
+    sessionCommands = ''
+        autokey-gtk &
+    '';         
+  };
+  
+  services.xserver.desktopManager = {
+    xfce.enable = true;
+  };
+
 
   # Configure keymap in X11
   services.xserver = {
@@ -50,22 +61,24 @@
   # Configure console keymap
   console.keyMap = "us-acentos";
 
+  systemd.sleep.extraConfig = "HibernateDelaySec=30m"; # from: https://github.com/NixOS/nixos-hardware/issues/672
+  
   # Enable sound with pipewire.
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
+  # services.pipewire = {
+  #   enable = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pulse.enable = true;
+  #   # If you want to use JACK applications, uncomment this
+  #   #jack.enable = true;
+  # 
+  #   # use the example session manager (no others are packaged yet so this is enabled by default,
+  #   # no need to redefine it in your config for now)
+  #   #media-session.enable = true;
+  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -78,6 +91,7 @@
       "wheel" # Enable ‘sudo’ for the user.
       "networkmanager" # Access to networkmanager
       "docker" # Access to the "/run/docker.sock"
+      "plocate"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [
@@ -174,11 +188,13 @@
   #   enableSSHSupport = true;
   # };
 
+  
   # List services that you want to enable:
 
-  # Configure keymap in X11
+  
   services.xserver = {
-    xkbOptions = "ctrl:nocaps";
+    xkbOptions = "ctrl:nocaps"; # Configure keymap in X11
+    
   };
 
   
