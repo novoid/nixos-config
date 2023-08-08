@@ -39,6 +39,7 @@
       element-desktop # Matrix-client
       xorg.xeyes
       dosbox
+      gnome.gnome-terminal
       
     ];
 

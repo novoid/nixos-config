@@ -116,7 +116,10 @@
 
       # spellchecker
       aspell aspellDicts.de aspellDicts.en aspellDicts.en-computers
-      
+     
+      ocrmypdf
+      yt-dlp
+      youtube-dl 
     ];
 
 
