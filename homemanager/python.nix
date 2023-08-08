@@ -11,7 +11,7 @@
     python3Packages.pyflakes
     python3Packages.pylint
     python3Packages.matplotlib
-
+    virtualenv
     sass
   ];
 
