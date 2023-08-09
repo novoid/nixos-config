@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, hostName, ... }:
 
 {
 
@@ -185,16 +185,11 @@ set -g status-keys emacs
   }; # tmux
 
   # FIXXME: currently trying to accomplish: replace "floyd" with the current hostname in the following line:
-  # ORIG:    home.file.".tmuxp/floyd.yaml".source = ../assets/.tmuxp/floyd.yaml; # I usually start my main tmux session via: tmuxp load $HOST
-  # networking.hostName
-  # home.file."emacs.d".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/src/emac";
-  #${config.networking.hostName}
 
+  # WORKS:
+  # home.file.".tmuxp/nixosvmr".source = ../assets/.tmuxp/nixosvmr.yaml; # with hard-coded hostname
+  home.file.".tmuxp/${hostName}".source = ../assets/.tmuxp/${hostName}.yaml;
 
-  #  home.file.".tmuxp/"${nixos.config.networking.hostName}".yaml".source = ../assets/.tmuxp/nixosvm.yaml; # I usually start my main tmux session via: tmuxp load $HOST
-  #${config.networking.hostName}
-  #home.file.".tmuxp/${config.networking.hostName}.yaml".source = ../assets/.tmuxp/${config.networking.hostName}.yaml; # I usually start my main tmux session via: tmuxp load $HOST
-  
 
     programs.zsh = {
       

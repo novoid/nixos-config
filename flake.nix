@@ -138,10 +138,14 @@
 
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager 
+          ({ config, ... }: {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs; # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            home-manager.extraSpecialArgs = {
+                 inherit inputs; # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+                 inherit (config.networking) hostName;
+            };
             home-manager.users.vk = {...}: { # SPECIFICTOKARL
                       imports = [
                           ./homemanager.nix
@@ -161,7 +165,7 @@
 
                       ];
                  };
-          } # end home-manager
+          }) # end home-manager
         ]; # end modules
       }; # end nixosvmr
 
