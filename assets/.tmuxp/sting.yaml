@@ -23,8 +23,8 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/share/rise/youtube
-  window_name: YouTube
+  start_directory: /home/vk/share/netvideos
+  window_name: netvideos
 - options:
     automatic-rename: 'off'
   panes:

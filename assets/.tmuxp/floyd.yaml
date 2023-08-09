@@ -5,12 +5,25 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos-configuration
+  start_directory: /home/vk/src/nixos
   window_name: nixos-config1
 - focus: 'true'
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos-configuration
+  start_directory: /home/vk/src/nixos
   window_name: nixos-config2
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/
+  window_name: misc
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/share/netvideos
+  window_name: netvideos
