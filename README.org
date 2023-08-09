@@ -127,7 +127,7 @@ having floyd around.
    - This creates a new SSH key, using the provided email as a label.
 2. At the prompt, type a secure passphrase.
 3. Choose a file name:
-   : ~/.ssh/id_ed25519_GitHub_$HOST
+   : /home/$USER/.ssh/id_ed25519_GitHub_$HOST
 4. adding to ssh-agend:
    : ssh-add ~/.ssh/id_ed25519_GitHub_$HOST
 5. visit https://github.com/settings/keys
