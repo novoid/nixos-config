@@ -6,14 +6,14 @@ windows:
   panes:
   - focus: 'true'
   start_directory: /home/vk/src/nixos
-  window_name: nixos-config1
+  window_name: nix1
 - focus: 'true'
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
   start_directory: /home/vk/src/nixos
-  window_name: nixos-config2
+  window_name: nix2
 - focus: 'true'
   options:
     automatic-rename: 'off'
@@ -26,4 +26,4 @@ windows:
   panes:
   - focus: 'true'
   start_directory: /home/vk/share/netvideos
-  window_name: netvideos
+  window_name: yd

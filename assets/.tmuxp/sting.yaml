@@ -24,7 +24,7 @@ windows:
   panes:
   - focus: 'true'
   start_directory: /home/vk/share/netvideos
-  window_name: netvideos
+  window_name: yd
 - options:
     automatic-rename: 'off'
   panes:
