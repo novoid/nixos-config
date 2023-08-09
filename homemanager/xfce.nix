@@ -245,19 +245,19 @@
         "/commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
         "/commands/custom/<Alt>F3" = "xfce4-appfinder";
         # "/commands/custom/<Alt>space" = recoll;
-        "/commands/custom/override" = true;
+        "/commands/custom/override" = true;  # no idea what this is
         #"/commands/custom/<Primary><Alt>Delete" = "xflock4";
         #"/commands/custom/<Primary>Escape" = "--menu";
         "/commands/custom/<Primary>F1" = "exec /home/vk/src/misc/vksave-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F2" = "exec /home/vk/src/misc/vkrestore-window-positions.sh"; # DEPENDENCY
-        "/commands/custom/<Primary>F7" = "emacs-everywhere";
+        "/commands/custom/<Primary>F7" = "emacs-everywhere"; # unconfirmed
         #"/commands/custom/<Primary>F8" = "{window}";
-        "/commands/custom/<Shift><Super>Left" = "active";
-        "/commands/custom/<Shift><Super>Right" = "active";
+        "/commands/custom/<Shift><Super>Left" = "active";  # no idea what this is
+        "/commands/custom/<Shift><Super>Right" = "active";  # no idea what this is
         "/commands/custom/<Super>l" = "xflock4";
-        "/commands/custom/<Super>p" = "xfce4-display-settings";
-        "/commands/custom/XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -10%"; # FIXXME: doesn't work on floyd yet
-        "/commands/custom/XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +10%"; # FIXXME: doesn't work on floyd yet
+        "/commands/custom/<Super>p" = "xfce4-display-settings"; # FIXXME: doesn't work
+        "/commands/custom/XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -10%";
+        "/commands/custom/XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +10%";
         "/commands/custom/XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
         #"/commands/custom/XF86AudioNext" = "--next";
         #"/commands/custom/XF86AudioPlay" = "--toggle-playing";
@@ -269,10 +269,10 @@
         "/commands/default/<Alt>F1" = "xfce4-popup-applicationsmenu";
 #         "/commands/default/<Alt>F2" = --collapsed
 #     true;
-        "/commands/default/<Alt>F2/startup-notify" = true;
+        "/commands/default/<Alt>F2/startup-notify" = true;  # no idea what this is
 #         "/commands/default/<Alt>F3" = xfce4-appfinder
 #     true;
-        "/commands/default/<Alt>F3/startup-notify" = true;
+        "/commands/default/<Alt>F3/startup-notify" = true;  # no idea what this is
         #"/commands/default/<Alt>Print" = "-w";
         #"/commands/default/<Alt><Super>s" = "orca";
         #"/commands/default/HomePage" = "WebBrowser";
@@ -290,12 +290,13 @@
         #"/commands/default/<Super>p" = "--minimal";
 #         "/commands/default/<Super>r" = -c
 #     true;
-        "/commands/default/<Super>r/startup-notify" = true;
+        "/commands/default/<Super>r/startup-notify" = true;  # no idea what this is
 #         "/commands/default/XF86Display" = --minimal;
 #         "/commands/default/XF86Mail" = MailReader;
 #         "/commands/default/XF86WWW" = WebBrowser;
 #         "providers" = <<UNSUPPORTED>>;
         "/xfwm4/custom/<Alt>F11" = "fullscreen_key";
+        "/xfwm4/default/<Alt>F11" = "fullscreen_key";
         "/xfwm4/custom/<Alt>F4" = "close_window_key";
         "/xfwm4/custom/<Alt><Shift>Tab" = "cycle_reverse_windows_key";
         "/xfwm4/custom/<Alt>Tab" = "cycle_windows_key";
@@ -303,30 +304,34 @@
         #"/xfwm4/custom/<Control><Shift><Alt>Right" = "move_window_right_key";
         #"/xfwm4/custom/<Control><Shift><Alt>Up" = "move_window_up_key";
         "/xfwm4/custom/Down" = "down_key";
-        "/xfwm4/custom/Escape" = "cancel_key";
+        "/xfwm4/custom/Up" = "up_key";
         "/xfwm4/custom/Left" = "left_key";
-        "/xfwm4/custom/override" = true;
-        "/xfwm4/custom/<Primary>F9" = "workspace_1_key";
-        "/xfwm4/custom/<Primary>F10" = "workspace_2_key";
-        "/xfwm4/custom/<Primary>F11" = "workspace_3_key";
-        "/xfwm4/custom/<Primary>F12" = "workspace_4_key";
-        "/xfwm4/custom/<Primary><Shift>F9"  = "move_window_workspace_1_key";
-        "/xfwm4/custom/<Primary><Shift>F10" = "move_window_workspace_2_key";
-        "/xfwm4/custom/<Primary><Shift>F11" = "move_window_workspace_3_key";
-        "/xfwm4/custom/<Primary><Shift>F12" = "move_window_workspace_4_key";
+        "/xfwm4/custom/Escape" = "cancel_key";
+        "/xfwm4/custom/Right" = "right_key";
+        "/xfwm4/default/Down" = "down_key";
+        "/xfwm4/default/Escape" = "cancel_key";
+        "/xfwm4/default/Left" = "left_key";
+        "/xfwm4/default/Up" = "up_key";
+        "/xfwm4/default/Right" = "right_key";
+        "/xfwm4/custom/override" = true;  # no idea what this is
+        "/xfwm4/custom/<Primary>F9" = "workspace_1_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary>F10" = "workspace_2_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary>F11" = "workspace_3_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary>F12" = "workspace_4_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary><Shift>F9"  = "move_window_workspace_1_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary><Shift>F10" = "move_window_workspace_2_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary><Shift>F11" = "move_window_workspace_3_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary><Shift>F12" = "move_window_workspace_4_key"; # FIXXME: doesn't work
         #"/xfwm4/custom/<Primary><Super>Down" = "tile_down_key";
         #"/xfwm4/custom/<Primary><Super>Up" = "tile_up_key";
-        "/xfwm4/custom/Right" = "right_key";
         #"/xfwm4/custom/<Shift><Alt>Left" = "left_workspace_key";
         #"/xfwm4/custom/<Shift><Alt>Right" = "right_workspace_key";
         "/xfwm4/custom/<Super>Down" = "hide_window_key";
         "/xfwm4/custom/<Super>Left" = "tile_left_key";
         "/xfwm4/custom/<Super>Right" = "tile_right_key";
         "/xfwm4/custom/<Super>Up" = "maximize_window_key";
-        "/xfwm4/custom/Up" = "up_key";
         #"/xfwm4/default/<Alt>Delete" = "del_workspace_key";
         #"/xfwm4/default/<Alt>F10" = "maximize_window_key";
-        "/xfwm4/default/<Alt>F11" = "fullscreen_key";
         #"/xfwm4/default/<Alt>F12" = "above_key";
         "/xfwm4/default/<Alt>F4" = "close_window_key";
         #"/xfwm4/default/<Alt>F6" = "stick_window_key";
@@ -337,9 +342,6 @@
         "/xfwm4/default/<Alt><Shift>Tab" = "cycle_reverse_windows_key";
         "/xfwm4/default/<Alt>space" = "popup_menu_key";
         "/xfwm4/default/<Alt>Tab" = "cycle_windows_key";
-        "/xfwm4/default/Down" = "down_key";
-        "/xfwm4/default/Escape" = "cancel_key";
-        "/xfwm4/default/Left" = "left_key";
         #"/xfwm4/default/<Primary><Alt>d" = "show_desktop_key";
         #"/xfwm4/default/<Primary><Alt>Down" = "down_workspace_key";
         #"/xfwm4/default/<Primary><Alt>End" = "move_window_next_workspace_key";
@@ -347,10 +349,10 @@
         "/xfwm4/default/<Primary><Alt>Left" = "left_workspace_key";
         "/xfwm4/default/<Primary><Alt>Right" = "right_workspace_key";
         #"/xfwm4/default/<Primary><Alt>Up" = "up_workspace_key";
-        "/xfwm4/default/<Primary>F1" = "workspace_1_key";
-        "/xfwm4/default/<Primary>F2" = "workspace_2_key";
-        "/xfwm4/default/<Primary>F3" = "workspace_3_key";
-        "/xfwm4/default/<Primary>F4" = "workspace_4_key";
+        "/xfwm4/default/<Primary>F1" = "workspace_1_key"; # FIXXME: doesn't work
+        "/xfwm4/default/<Primary>F2" = "workspace_2_key"; # FIXXME: doesn't work
+        "/xfwm4/default/<Primary>F3" = "workspace_3_key"; # FIXXME: doesn't work
+        "/xfwm4/default/<Primary>F4" = "workspace_4_key"; # FIXXME: doesn't work
         #"/xfwm4/default/<Primary>F5" = "workspace_5_key";
         #"/xfwm4/default/<Primary>F6" = "workspace_6_key";
         #"/xfwm4/default/<Primary>F7" = "workspace_7_key";
@@ -359,7 +361,6 @@
         #"/xfwm4/default/<Primary><Shift><Alt>Left" = "move_window_left_key";
         #"/xfwm4/default/<Primary><Shift><Alt>Right" = "move_window_right_key";
         #"/xfwm4/default/<Primary><Shift><Alt>Up" = "move_window_up_key";
-        "/xfwm4/default/Right" = "right_key";
         #"/xfwm4/default/<Shift><Alt>Page_Down" = "lower_window_key";
         #"/xfwm4/default/<Shift><Alt>Page_Up" = "raise_window_key";
         #"/xfwm4/default/<Super>KP_Down" = "tile_down_key";
@@ -371,7 +372,6 @@
         #"/xfwm4/default/<Super>KP_Right" = "tile_right_key";
         #"/xfwm4/default/<Super>KP_Up" = "tile_up_key";
         "/xfwm4/default/<Super>Tab" = "switch_window_key";
-        "/xfwm4/default/Up" = "up_key";
       }; # xfce4-keyboard-shortcuts
       
       xsettings = {
@@ -441,7 +441,7 @@
       xfce4-mixer = { # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         # "/sound-card" = "HDAIntelHDMIAlsamixer";
-        "/volume-step-size" = 5;
+        #"/volume-step-size" = 5;
       }; # xfce4-mixer
 
       
