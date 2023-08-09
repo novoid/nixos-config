@@ -180,8 +180,8 @@
         # Clock
         "plugins/plugin-15" = "clock";
         "plugins/plugin-15/digital-layout" = 3; # Time Only
-        "plugins/plugin-15/digital-time-font" = "Sans 8";
-        "plugins/plugin-15/digital-time-format" = "%A %d %R";
+        "plugins/plugin-15/digital-time-font" = "Sans 11";
+        "plugins/plugin-15/digital-time-format" = "%a %d %R";
         "plugins/plugin-15/tooltip-format" = "%A %d %B %Y"; # Saturday 29 July 2023
         "plugins/plugin-15/mode" = 2; # digital
         "plugins/plugin-15/show-frame" = false;
