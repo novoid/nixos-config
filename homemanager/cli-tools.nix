@@ -202,7 +202,7 @@ set -g status-keys emacs
         enable = true;
         theme = "kolo";
         plugins = [ # List of plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-          "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+          # "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git -> overwrites with my own "ga" alias
           "fzf" # fuzzy auto-completion and key bindings https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf
           "python" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python
           # conflicts with thefuck binding: "sudo" # Easily prefix your current or previous commands with sudo by pressing esc twice. https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
