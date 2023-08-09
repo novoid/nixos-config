@@ -188,7 +188,7 @@ set -g status-keys emacs
 
   # WORKS:
   # home.file.".tmuxp/nixosvmr".source = ../assets/.tmuxp/nixosvmr.yaml; # with hard-coded hostname
-  home.file.".tmuxp/${hostName}".source = ../assets/.tmuxp/${hostName}.yaml;
+  home.file.".tmuxp/${hostName}.yaml".source = ../assets/.tmuxp/${hostName}.yaml;
 
 
     programs.zsh = {
