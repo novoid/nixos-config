@@ -256,12 +256,12 @@
         "/commands/custom/<Shift><Super>Right" = "active";
         "/commands/custom/<Super>l" = "xflock4";
         "/commands/custom/<Super>p" = "--minimal";
-        "/commands/custom/XF86AudioLowerVolume" = "5%-"; # FIXXME: doesn't work on floyd yet
-        "/commands/custom/XF86AudioMute" = "";
+        "/commands/custom/XF86AudioLowerVolume" = "pactl set-sink-volume @DEFAULT_SINK@ -10%"; # FIXXME: doesn't work on floyd yet
+        "/commands/custom/XF86AudioRaiseVolume" = "pactl set-sink-volume @DEFAULT_SINK@ +10%"; # FIXXME: doesn't work on floyd yet
+        "/commands/custom/XF86AudioMute" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
         "/commands/custom/XF86AudioNext" = "--next";
         "/commands/custom/XF86AudioPlay" = "--toggle-playing";
         "/commands/custom/XF86AudioPrev" = "--previous";
-        "/commands/custom/XF86AudioRaiseVolume" = "5%+"; # FIXXME: doesn't work on floyd yet
         "/commands/custom/XF86AudioStop" = "--stop";
         "/commands/custom/XF86Display" = "--minimal";
         # "/commands/custom/XF86Mail" = MailReader;
