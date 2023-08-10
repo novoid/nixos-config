@@ -251,7 +251,7 @@
         "/commands/custom/<Primary>F1" = "exec /home/vk/src/misc/vksave-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F2" = "exec /home/vk/src/misc/vkrestore-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F7" = "emacs-everywhere"; # unconfirmed
-        #"/commands/custom/<Primary>F8" = "{window}";
+        "/commands/custom/<Primary>F8" = "rofi -monitor -2 -show window -kb-accept-alt 'Return' -kb-accept-entry 'Shift+Return' -window-command '/home/vk/src/misc/vk-switch-to-windowid.sh {window}'";
         "/commands/custom/<Shift><Super>Left" = "active";  # no idea what this is
         "/commands/custom/<Shift><Super>Right" = "active";  # no idea what this is
         "/commands/custom/<Super>l" = "xflock4";
