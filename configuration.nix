@@ -136,6 +136,7 @@
     tmux
     syncthing
     cron
+    wpa_supplicant
 
     # ##################################################################
     # xfce: this can't be in homemanager/xfce.nix because of: 
