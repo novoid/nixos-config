@@ -38,6 +38,7 @@
       vnstat
       file
       pciutils
+      ncftp
 
       ## 2023-07-24: this doesn't work: → "error: syntax error, unexpected IF"
 #      if config.my.isnotebook; then
