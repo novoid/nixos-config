@@ -46,7 +46,8 @@
 #      fi
       
       # NixOS
-      comma
+      nix-index  # "locate/grep" for files in all nix packages
+      comma      # temporarily installing packages in current shell
 
       
       # file management
