@@ -56,7 +56,6 @@
       mmv
       less
       mktemp
-      plocate # much faster locate
       pwgen
       # 2022-11-06 broken: haskellPackages.haskell-pdf-presenter
       inotify-tools
