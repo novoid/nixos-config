@@ -1,24 +1,19 @@
 { config, pkgs, lib, ... }:
 {
 
-    services.gnome-keyring.enable = true;
+  # NOTE: System-level settings are in ../xfce.nix
 
-    services.clipman.enable = true;
+  services.gnome-keyring.enable = true;
   
-    services.gammastep.enable = true;
-    services.gammastep.tray = true;
-    services.gammastep.latitude  = "47.0"; # SPECIFICTOKARL
-    services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
-    services.gammastep.temperature.day = 5700;
-    services.gammastep.temperature.night = 3500;
+  services.clipman.enable = true;
   
-    xfconf.enable = true;
+  services.gammastep.enable = true;
+  services.gammastep.tray = true;
+  services.gammastep.latitude  = "47.0"; # SPECIFICTOKARL
+  services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
+  services.gammastep.temperature.day = 5700;
+  services.gammastep.temperature.night = 3500;
     
-    home.packages = with pkgs; [
-
-
-    ];
-
 #        xfconf.settings = {
     # FIXXME: test from https://www.reddit.com/r/NixOS/comments/15coxtr/homemanager_using_hostname_for_hostspecific/
     xfconf.settings = let
@@ -250,7 +245,7 @@
         #"/commands/custom/<Primary>Escape" = "--menu";
         "/commands/custom/<Primary>F1" = "exec /home/vk/src/misc/vksave-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F2" = "exec /home/vk/src/misc/vkrestore-window-positions.sh"; # DEPENDENCY
-        "/commands/custom/<Primary>F7" = "emacs-everywhere"; # unconfirmed
+        "/commands/custom/<Primary>F7" = "emacsclient --eval '(emacs-everywhere)'"; # unconfirmed
         "/commands/custom/<Primary>F8" = "rofi -monitor -2 -show window -kb-accept-alt 'Return' -kb-accept-entry 'Shift+Return' -window-command '/home/vk/src/misc/vk-switch-to-windowid.sh {window}'";
         "/commands/custom/<Shift><Super>Left" = "active";  # no idea what this is
         "/commands/custom/<Shift><Super>Right" = "active";  # no idea what this is
