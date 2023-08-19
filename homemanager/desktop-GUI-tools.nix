@@ -41,6 +41,8 @@
       dosbox
       gnome.gnome-terminal
       libnotify
+
+      (callPackage ../pkgs/xdu.nix {})
       
     ];
 
