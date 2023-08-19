@@ -51,7 +51,7 @@
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager
-          ({ config, ... }: {
+          ({ config, lib, ... }: {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
@@ -70,11 +70,17 @@
                           ./homemanager/music-playback.nix
                           ./homemanager/python.nix
                           ./homemanager/videos.nix
-                          ./homemanager/notebooks.nix
                           #./homemanager/qemu-kvm-guest.nix
                           ./homemanager/latex.nix
                           #./homemanager/torrent.nix
-                      ];
+                          
+                          #./homemanager/notebooks.nix
+                      ]
+                      ++ (lib.optional config.my.isnotebook ./homemanager/notebooks.nix)
+                      # ALTERNATIVE:
+                      # ++ (if config.my.isnotebook then [./homemanager/notebooks.nix] else [])
+                      # else-stmt is not optional in nix
+                        ;
                  };
           }) # end home-manager
         ]; # end modules
