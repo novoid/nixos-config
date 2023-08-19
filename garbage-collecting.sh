@@ -1,2 +1,5 @@
-nix-collect-garbage --delete-old
+#!/usr/bin/env bash
 
+time nix-collect-garbage --delete-old
+
+#end
