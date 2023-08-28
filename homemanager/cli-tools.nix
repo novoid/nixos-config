@@ -8,6 +8,7 @@
       zsh
       thefuck
       grml-zsh-config
+      lsd  # https://github.com/Peltoche/lsd + German: https://www.heise.de/news/LSD-in-der-Kommandozeile-GNU-List-Befehl-in-Rust-und-Farbe-9287119.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag
       
       # system administration
       htop
@@ -237,7 +238,8 @@ set -g status-keys emacs
       };
       
       shellAliases = {
-        "l" = "ls -la";
+        "ls" = "lsd"l
+        "l" = "lsd -la";
         "any" = "ps xauwww|grep -v grep|grep";
         "dl" = "ls -lhtr --color=always ~/Downloads | tail -n 10"; # Show the 10 newest Downloads
         "o" = "less";
