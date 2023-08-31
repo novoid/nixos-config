@@ -70,6 +70,7 @@
                           ./homemanager/music-playback.nix
                           ./homemanager/python.nix
                           ./homemanager/videos.nix
+                          #./homemanager/qemu-kvm-host.nix
                           #./homemanager/qemu-kvm-guest.nix
                           ./homemanager/latex.nix
                           #./homemanager/torrent.nix
@@ -86,6 +87,60 @@
         ]; # end modules
       }; # end floyd
 
+
+      rise = nixpkgs.lib.nixosSystem { # SPECIFICTOKARL
+        system = "x86_64-linux";
+
+        modules = [
+	        {
+        	  system.stateVersion = "23.05"; # Did you read the comment?
+	        }
+          nixos-hardware.nixosModules.lenovo-thinkpad-x260
+          ./hosts/rise
+          ./configuration.nix
+
+          # make home-manager as a module of nixos
+          # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
+          home-manager.nixosModules.home-manager
+          ({ config, lib, ... }: {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+                 inherit inputs; # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+                 inherit (config.networking) hostName;
+            };
+            home-manager.users.vk = {...}: { # SPECIFICTOKARL
+                      imports = [
+                          ./homemanager.nix
+                          ./homemanager/xfce.nix
+                          ./homemanager/browsers.nix
+                          ./homemanager/cli-tools.nix
+                          ./homemanager/desktop-GUI-tools.nix
+                          ./homemanager/emacs.nix
+                          ./homemanager/graphics.nix
+                          ./homemanager/music-playback.nix
+                          ./homemanager/python.nix
+                          ./homemanager/videos.nix
+                          ./homemanager/qemu-kvm-host.nix
+                          #./homemanager/qemu-kvm-guest.nix
+                          ./homemanager/latex.nix
+                          #./homemanager/torrent.nix
+                          
+                          ./homemanager/business.nix
+                          #./homemanager/notebooks.nix
+                      ]
+                      ++ (lib.optional config.my.isnotebook ./homemanager/notebooks.nix)
+                      # ALTERNATIVE:
+                      # ++ (if config.my.isnotebook then [./homemanager/notebooks.nix] else [])
+                      # else-stmt is not optional in nix
+                        ;
+                 };
+          }) # end home-manager
+        ]; # end modules
+      }; # end rise
+
+
+      
       nixosvms = nixpkgs.lib.nixosSystem {
         ## a qemu NixOS-VM
         system = "x86_64-linux";
@@ -124,6 +179,7 @@
                           #./homemanager/python.nix
                           #./homemanager/videos.nix
                           #./homemanager/notebooks.nix
+                          #./homemanager/qemu-kvm-host.nix
                           ./homemanager/qemu-kvm-guest.nix
                           #./homemanager/latex.nix
                           #./homemanager/torrent.nix
@@ -173,6 +229,7 @@
                           #./homemanager/python.nix
                           #./homemanager/videos.nix
                           #./homemanager/notebooks.nix
+                          #./homemanager/qemu-kvm-host.nix
                           ./homemanager/qemu-kvm-guest.nix
                           #./homemanager/latex.nix
                           #./homemanager/torrent.nix
