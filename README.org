@@ -64,12 +64,16 @@ distributions.
       }                  # usual, this line is already there
       #+end_src
 
-   4. OPTIONALLY: Install packages like vim, sshd, flakes, git in case you need to play around more or download repo via =git clone=
+   4. Add the =git= and package. Also add your favourite editor as well for fixing miscellaneous things. I'm using =vim= for that.
+      - Just write [[https://search.nixos.org/packages][the corresponding package name]] where =firefox= is installed in the =configuration.nix=.
 
-   5. Update and activate your setup
+   5. OPTIONALLY: Install packages like vim, sshd, flakes in case you need to play around more
+      - Just write [[https://search.nixos.org/packages][the corresponding package name]] where =firefox= is installed in the =configuration.nix=.
+
+   6. Update and activate your setup
       : sudo nixos-rebuild switch
 
-4) Get git repo via (=scp= or =git clone https://github.com/novoid/nixos-config.git ~/nixos=)
+4) Get this NixOS configuration git repository via (=scp= or =git clone https://github.com/novoid/nixos-config.git ~/nixos=)
 
    - target directory: =~/nixos/nixos-configuration=
      - I'm using following command at my LAN:
@@ -83,6 +87,8 @@ distributions.
       #+BEGIN_SRC sh
       cd ~/nixos
       cp /etc/nixos/hardware-configuration.nix ~/nixos/hosts/$HOSTNAME/
+      cp /etc/nixos/configuration.nix ~/nixos/hosts/$HOSTNAME/default.nix
+      git add 
       #+END_SRC
 
 6) *Check for things that won't work or need attention when you're not Karl Voit*:
@@ -109,11 +115,20 @@ distributions.
 
    4. Fix any error that may arise at this point.
       - Yes, this can be frustrating. I wish you good luck here.
+      - Usually, you just have to remove stuff from
+        =~/nixos/hosts/$HOSTNAME/default.nix= when it is also defined
+        in =flakes.nix= or other existing files.
+      - Futhermore, you might have to create (and =git add=)
+        configuration files that are assumed to exist such as
+        =assets/.tmuxp/$HOSTNAME.yaml=.
 
-   5. Execute store optimization (replacing copies with hardlinks):
+   5. I do recommend a reboot here to cleanly boot the updated OS with
+      all of its settings.
+
+   6. Execute store optimization (replacing copies with hardlinks):
       : nix-store --optimise
 
-   6. OPTIONALLY: Symlink =/etc/nixos= to =~/nixos= if you want to use =nixos-rebuild= without the optional parameter for the path.
+   7. OPTIONALLY: Symlink =/etc/nixos= to =~/nixos= if you want to use =nixos-rebuild= without the optional parameter for the path.
 
 ** Setup GitHub ssh authentication
 :PROPERTIES:

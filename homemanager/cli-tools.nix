@@ -238,7 +238,7 @@ set -g status-keys emacs
       };
       
       shellAliases = {
-        "ls" = "lsd"l
+        "ls" = "lsd";
         "l" = "lsd -la";
         "any" = "ps xauwww|grep -v grep|grep";
         "dl" = "ls -lhtr --color=always ~/Downloads | tail -n 10"; # Show the 10 newest Downloads
