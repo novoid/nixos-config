@@ -14,6 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.grub.useOSProber = false; ## disable os prober warnings; activate for dual-boot with Windows
 
   networking.hostName = "rise"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -135,5 +136,36 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   #system.stateVersion = "22.11"; # Did you read the comment?
+
+  my.isnotebook = true;
+  my.isvm = false;
+
+  services = {
+    syncthing = {
+      enable = true;
+      user = "vk";
+      dataDir = "/home/vk/share";
+      configDir = "/home/vk/.config/syncthing";
+      overrideDevices = false;     # overrides any devices added or deleted through the WebUI
+      overrideFolders = false;     # overrides any folders added or deleted through the WebUI
+      devices = {
+        "sting" = { id = "GDIGF5G-ZPMAKBL-JQO6SXC-N322AAE-ENNGEDL-BPBZBTT-NFYXJ5M-SWHZYA7"; };
+        "karl-voit.at" = { id = "TPKSMZI-FUNRWLY-PND3NID-DPWM3RH-PP2W5ID-3MYSLQQ-MMLSIPP-ZIUHSAH"; };
+        #"floyd" = { id = "HJUQBBS-PZ5PVX2-O737FMQ-6SOR2PM-5H2EHIM-FGLR4NT-EZNWRFX-S6NQXAB"; };
+        #"" = { id = ""; };
+        #"" = { id = ""; };
+      };
+      # folders = {
+      #   "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
+      #     path = "/home/vk/nixos";    # Which folder to add to Syncthing
+      #     devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
+      #   };
+      #  
+      # }; # folders
+    };
+  };
+  ## # Syncthing ports
+  ## networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  ## networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
 }
