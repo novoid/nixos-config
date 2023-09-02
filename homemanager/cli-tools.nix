@@ -40,6 +40,7 @@
       file
       pciutils
       ncftp
+      socat
 
       ## 2023-07-24: this doesn't work: → "error: syntax error, unexpected IF"
 #      if config.my.isnotebook; then
