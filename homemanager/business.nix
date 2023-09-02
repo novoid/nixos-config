@@ -9,6 +9,7 @@
       obs-studio
       evolutionWithPlugins
       
+      openvpn networkmanager-openvpn gnome.networkmanager-openvpn
     ];
 
 
