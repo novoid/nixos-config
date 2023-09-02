@@ -1,29 +1,35 @@
-session_name: 'floydvk'
+session_name: 'rise vk'
 windows:
 - focus: 'true'
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos
-  window_name: nix1
-- focus: 'true'
+  start_directory: /home/vk/tmp/2del
+  window_name: 2del
+- start_directory: /home/vk
+  window_name: sting
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos
-  window_name: nix2
-- focus: 'true'
+- start_directory: /home/vk/Downloads
+  window_name: Downloads
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/
-  window_name: misc
-- options:
+- start_directory: /home/vk/share/netvideos
+  window_name: netvideos
+- start_directory: /home/vk/rise/gem/epa/idp/rise-betrieb-public-keys
+  window_name: pubkeys
+  options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/share/netvideos
-  window_name: yd
+- start_directory: /home/vk/rise/gem/epa/idp/rise-betrieb-public-keys-non-rb-personen
+  window_name: pubkeys-ext
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
