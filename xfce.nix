@@ -17,6 +17,16 @@
     xfce.enable = true;
   };
 
+  services.gnome-keyring.enable = true;
+  
+  services.clipman.enable = true;
+  
+  services.gammastep.enable = true;
+  services.gammastep.tray = true;
+  services.gammastep.latitude  = "47.0"; # SPECIFICTOKARL
+  services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
+  services.gammastep.temperature.day = 5700;
+  services.gammastep.temperature.night = 3500;
   
   environment.systemPackages = with pkgs; [
 
