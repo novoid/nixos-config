@@ -139,6 +139,9 @@ distributions.
 
 -----
 
+Please do replace =$HOST= (your hostname), =$USER= (your local
+username) and =$GITHUBUSER= (username at GitHub) accordingly:
+
 1. execute
    : ssh-keygen -t ed25519 -C "github.$HOST@karl-voit.at"
    - This creates a new SSH key, using the provided email as a label.
@@ -151,6 +154,11 @@ distributions.
 6. click on "New SSH key"
 7. insert a name and paste the content of the following file:
    : ~/.ssh/id_ed25519_GitHub_$HOST.pub
+8. add the following lines to your =~/.ssh/config= file (create if it doesn't exist):
+   : host github.com
+   :     IdentityFile ~/.ssh/id_ed25519_GitHub_$HOST
+   :     User $GITHUBUSER
+
 
 ** License
 
