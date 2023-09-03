@@ -1,8 +1,20 @@
 { config, pkgs, lib, ... }:
 {
 
-  # NOTE: System-level settings are in ../xfce.nix
+  # NOTE: Most system-level settings are in ../xfce.nix
 
+  services.clipman.enable = true; ## 2023-09-03 on system level: "The option `services.clipman' does not exist."
+
+  services.gnome-keyring.enable = true; ## 2023-09-03: on system level: "The option `services.gnome-keyring' does not exist."
+
+  ## 2023-09-03 on system level: "The option `services.gammastep' does not exist."
+  services.gammastep.enable = true;
+  services.gammastep.tray = true;
+  services.gammastep.latitude  = "47.0"; # SPECIFICTOKARL
+  services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
+  services.gammastep.temperature.day = 5700;
+  services.gammastep.temperature.night = 3500;
+  
     
 #        xfconf.settings = {
     # FIXXME: test from https://www.reddit.com/r/NixOS/comments/15coxtr/homemanager_using_hostname_for_hostspecific/
