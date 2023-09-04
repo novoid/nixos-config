@@ -143,20 +143,20 @@ Please do replace =$HOST= (your hostname), =$USER= (your local
 username) and =$GITHUBUSER= (username at GitHub) accordingly:
 
 1. execute
-   : ssh-keygen -t ed25519 -C "github.$HOST@karl-voit.at"
+   : ssh-keygen -t ed25519 -C "git.$HOST@karl-voit.at"
    - This creates a new SSH key, using the provided email as a label.
 2. At the prompt, type a secure passphrase.
 3. Choose a file name:
-   : /home/$USER/.ssh/id_ed25519_GitHub_$HOST
+   : /home/$USER/.ssh/id_ed25519_Git_$HOST
 4. adding to ssh-agend:
-   : ssh-add ~/.ssh/id_ed25519_GitHub_$HOST
+   : ssh-add ~/.ssh/id_ed25519_Git_$HOST
 5. visit https://github.com/settings/keys
 6. click on "New SSH key"
 7. insert a name and paste the content of the following file:
-   : ~/.ssh/id_ed25519_GitHub_$HOST.pub
+   : ~/.ssh/id_ed25519_Git_$HOST.pub
 8. add the following lines to your =~/.ssh/config= file (create if it doesn't exist):
    : host github.com
-   :     IdentityFile ~/.ssh/id_ed25519_GitHub_$HOST
+   :     IdentityFile ~/.ssh/id_ed25519_Git_$HOST
    :     User $GITHUBUSER
 
 
