@@ -285,6 +285,19 @@ set -g status-keys emacs
 
       
     }; # mpv
-  
+
+    ## see also issue from id:2023-09-03-fix-no-pinentry-for-Emacs-decrypt-gpg
+    ## from: https://github.com/hlissner/dotfiles/blob/089f1a9da9018df9e5fc200c2d7bef70f4546026/modules/shell/gnupg.nix#L22
+    # HACK Without this config file you get "No pinentry program" on 20.03.
+    #      programs.gnupg.agent.pinentryFlavor doesn't appear to work, and this
+    #      is cleaner than overriding the systemd unit.
+    home.file.".gnupg/gpg-agent.conf" = {
+      text = ''
+        default-cache-ttl 600
+        max-cache-ttl 6000
+        pinentry-program ${pkgs.pinentry.gtk2}/bin/pinentry
+      '';
+    };
+    
   
 }

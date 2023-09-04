@@ -145,7 +145,7 @@
     pinentryFlavor = "gtk2"; 
   };
   services.pcscd.enable = true;  
-
+  ## 2023-09-04: in order to avoid "No pinentry program" see also setting for home.file.".gnupg/gpg-agent.conf" in cli-tools.nix!
   
   # List services that you want to enable:
 
