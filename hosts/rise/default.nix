@@ -16,6 +16,16 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.loader.grub.useOSProber = false; ## disable os prober warnings; activate for dual-boot with Windows
 
+  # Setup keyfile
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
+  };
+
+  # Enable swap on luks
+  boot.initrd.luks.devices."luks-f6d1fc7a-beb0-452b-a789-d870c085f071".device = "/dev/disk/by-uuid/f6d1fc7a-beb0-452b-a789-d870c085f071";
+  boot.initrd.luks.devices."luks-f6d1fc7a-beb0-452b-a789-d870c085f071".keyFile = "/crypto_keyfile.bin";
+
+
   networking.hostName = "rise"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
