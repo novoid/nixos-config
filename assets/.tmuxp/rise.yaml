@@ -21,13 +21,13 @@ windows:
   - focus: 'true'
 - start_directory: /home/vk/share/netvideos
   window_name: netvideos
-- start_directory: /home/vk/rise/gem/epa/idp/rise-betrieb-public-keys
+- start_directory: /home/vk/rise/gem/epa/rb/rise-betrieb-public-keys
   window_name: pubkeys
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-- start_directory: /home/vk/rise/gem/epa/idp/rise-betrieb-public-keys-non-rb-personen
+- start_directory: /home/vk/rise/gem/epa/rb/rise-betrieb-public-keys-non-rb-personen
   window_name: pubkeys-ext
   options:
     automatic-rename: 'off'
