@@ -59,6 +59,7 @@
     emojione
     rofi
     brightnessctl
+
     # libsForQt514.oxygen-icons5 ## 2022-11-06 broken
     # ##################################################################
 

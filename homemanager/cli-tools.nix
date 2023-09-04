@@ -68,10 +68,6 @@
       # backups
       rsnapshot
 
-      # GnuPG
-      gnupg
-
-      
       # ssh
       sshuttle
       ssh-askpass-fullscreen

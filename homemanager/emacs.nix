@@ -31,6 +31,8 @@
     xorg.xprop
     xorg.xwininfo
     gnuplot
+
+    #emacsPackages.pinentry
     
   ];
 
