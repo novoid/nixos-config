@@ -95,7 +95,7 @@
 	        {
         	  system.stateVersion = "23.05"; # Did you read the comment?
 	        }
-          nixos-hardware.nixosModules.lenovo-thinkpad-x260
+          nixos-hardware.nixosModules.lenovo-thinkpad-t490
           ./hosts/rise
           ./configuration.nix
 
