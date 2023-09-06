@@ -25,6 +25,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; ## from https://thiscute.world/en/posts/nixos-and-flake-basics/
+    gpt4all.url = "github:polygon/gpt4all-nix"; ## 2023-09-06 https://github.com/polygon/gpt4all-nix ; example use-case in config: https://github.com/search?q=repo%3AWhiteBlackGoose%2Fdotfiles%20gpt4all&type=code
   };
 
   outputs = inputs@{
@@ -33,6 +34,7 @@
       nix,
       nixos-hardware,
       home-manager,
+      gpt4all,
       ...
   }: {
     nixosConfigurations = {
@@ -98,7 +100,8 @@
           nixos-hardware.nixosModules.lenovo-thinkpad-t490
           ./hosts/rise
           ./configuration.nix
-
+          # FIXXME: gpt4all.nixosModules.gpt4all-chat  ## 2023-09-06 fails with: "error: attribute 'nixosModules' missing"
+          
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager
