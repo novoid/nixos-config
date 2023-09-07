@@ -3,7 +3,9 @@
 {
 
     home.packages = with pkgs; [
-# broken:      aqemu
+    qemu
+    virt-manager
+    # broken:      aqemu
     ];
 
 
