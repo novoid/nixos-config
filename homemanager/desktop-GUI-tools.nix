@@ -43,6 +43,8 @@
       libnotify
 
       (callPackage ../pkgs/xdu.nix {})
+
+      qpwgraph ## pipewire tool
       
     ];
 
