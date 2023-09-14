@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
 
@@ -12,11 +12,11 @@
 
   home.packages = with pkgs; [
     hicolor-icon-theme
-    inputs.nh.packages.<system>.default
+    inputs.nh.packages.${pkgs.system}.default
   ];
 
-  environment.sessionVariables.FLAKE = "/home/vk/nixos";
-
+    home.sessionVariables.FLAKE = "/home/vk/nixos";
+  
   gtk = {
     enable = true;
     theme = {
