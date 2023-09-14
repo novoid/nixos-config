@@ -178,4 +178,28 @@
   ## networking.firewall.allowedTCPPorts = [ 8384 22000 ];
   ## networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
+# 2023-09-08: script broken, needs fixing first #  ## id:2023-09-08-convert-cronjobs-to-systemd-timers
+# 2023-09-08: script broken, needs fixing first #  systemd.timers."jira-notify-high-prio" = {
+# 2023-09-08: script broken, needs fixing first #    wantedBy = [ "timers.target" ];
+# 2023-09-08: script broken, needs fixing first #    timerConfig = {
+# 2023-09-08: script broken, needs fixing first #      OnBootSec = "5m";
+# 2023-09-08: script broken, needs fixing first #      OnUnitActiveSec = "5m";
+# 2023-09-08: script broken, needs fixing first #      Unit = "jira-notify-high-prio.service";
+# 2023-09-08: script broken, needs fixing first #    };
+# 2023-09-08: script broken, needs fixing first #  };
+# 2023-09-08: script broken, needs fixing first #
+# 2023-09-08: script broken, needs fixing first #  ## id:2023-09-08-convert-cronjobs-to-systemd-timers
+# 2023-09-08: script broken, needs fixing first #  systemd.services."jira-notify-high-prio" = {
+# 2023-09-08: script broken, needs fixing first #    script = ''
+# 2023-09-08: script broken, needs fixing first #    set -eu
+# 2023-09-08: script broken, needs fixing first #    DISPLAY=:0.0 /home/vk/src/jira-desktop-notifications/jira-notification-high-prio-tickets.sh
+# 2023-09-08: script broken, needs fixing first #    '';            
+# 2023-09-08: script broken, needs fixing first #    serviceConfig = {
+# 2023-09-08: script broken, needs fixing first #      Type = "oneshot";
+# 2023-09-08: script broken, needs fixing first #      User = "vk";
+# 2023-09-08: script broken, needs fixing first #    };
+# 2023-09-08: script broken, needs fixing first #  };
+
+  
+  
 }
