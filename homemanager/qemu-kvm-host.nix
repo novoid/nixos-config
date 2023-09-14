@@ -4,7 +4,7 @@
 
     home.packages = with pkgs; [
     qemu
-    virt-manager
+    virt-manager-qt
     # broken:      aqemu
     ];
 
