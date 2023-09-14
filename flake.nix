@@ -26,6 +26,10 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; ## from https://thiscute.world/en/posts/nixos-and-flake-basics/
     gpt4all.url = "github:polygon/gpt4all-nix"; ## 2023-09-06 https://github.com/polygon/gpt4all-nix ; example use-case in config: https://github.com/search?q=repo%3AWhiteBlackGoose%2Fdotfiles%20gpt4all&type=code
+    inputs.nh = {  ## https://github.com/viperML/nh
+      url = "github:viperML/nh";
+      inputs.nixpkgs.follows = "nixpkgs"; # override this repo's nixpkgs snapshot
+    };
   };
 
   outputs = inputs@{

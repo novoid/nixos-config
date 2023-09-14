@@ -12,8 +12,10 @@
 
   home.packages = with pkgs; [
     hicolor-icon-theme
+    inputs.nh.packages.<system>.default
   ];
 
+  environment.sessionVariables.FLAKE = "/home/vk/nixos";
 
   gtk = {
     enable = true;
