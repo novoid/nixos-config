@@ -33,3 +33,9 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
+- start_directory: /home/vk/nixos
+  window_name: NixOS
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
