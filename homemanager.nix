@@ -15,7 +15,7 @@
     inputs.nh.packages.${pkgs.system}.default
   ];
 
-    home.sessionVariables.FLAKE = "/home/vk/nixos";
+  home.sessionVariables.FLAKE = "/home/vk/nixos"; ## for nh
   
   gtk = {
     enable = true;
