@@ -25,17 +25,22 @@ I wanted to keep close to my NixOS configuration files.
 
 ** Hosts
 
-As of 2023-07-29, I do have three different hosts running NixOS:
+As of 2023-09-16, I do have four different hosts running this NixOS configuration:
 
-*floyd* is my personal notebook which I was using to test NixOS
-without affecting my main systems that are running Xubuntu LTS or
-Debian stable.
+*rise* is my business notebook (Lenovo T490) which I'm using during a
+business week. This is the most intensly used NixOS system at the
+moment by far.
+
+*floyd* is my personal notebook (Lenovo X260) which I was using to
+test NixOS without affecting my main systems that are running Xubuntu
+LTS or Debian stable. I don't work on it much. It's mostly used for
+FOSS conferences I attend.
 
 *nixosvmr* and *nixosvms* are two qemu virtual machines in order to
 test multi-host setup or to play with my NixOS configuration without
 having floyd around. Notice that as of 2023-08-09, 20GB (virtual) disk space 
 is too small. NixOS really adds up lots of space in comparison to Debian-based 
-distributions.
+distributions. I'm using the VMs rarely since I started with floyd and rise.
 
 ** Installation
 
@@ -139,7 +144,11 @@ distributions.
 :CREATED:  [2023-08-06 Sun 21:11]
 :END:
 
-- [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][Source]] 
+This is quite handy to be included here because this is what I
+typically do right after setting up NixOS if I don't take over the old
+keys via my previous dotfiles.
+
+- [[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent][main source for this]] 
 
 -----
 
