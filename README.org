@@ -1,5 +1,9 @@
 * NixOS Configuration With Flakes, Home-manager
 
+I wrote [[https://karl-voit.at/2023/09/12/nix/][a long article about my journey to Nix, NixOS, Home Manager
+and flakes]] where you may find more background information about this
+repository and its goals.
+
 ** Basic Concept
 
 My setup is using the =flake.nix= as a central point. As you can see
@@ -8,7 +12,7 @@ command:
 
 : sudo nixos-rebuild switch --flake /home/vk/nixos
 
-You may need to adapt the path to meet your username, of course.
+You may need to adapt the path to meet your path, of course.
 
 =flake.nix= is calling most of the other files depending on the set hostname:
 
