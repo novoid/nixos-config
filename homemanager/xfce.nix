@@ -12,7 +12,12 @@
   services.gammastep.temperature.night = 3500;
   
   services.clipman.enable = true; ## 2023-09-03: on HM level the option is `services.clipman...'
-    
+
+  home.packages = with pkgs; [
+
+
+  ];
+      
 #        xfconf.settings = {
     # FIXXME: test from https://www.reddit.com/r/NixOS/comments/15coxtr/homemanager_using_hostname_for_hostspecific/
     xfconf.settings = let
