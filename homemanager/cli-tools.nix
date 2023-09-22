@@ -125,6 +125,7 @@
       yt-dlp
       youtube-dl
       jq ## used for yth.sh
+      magic-wormhole
     ];
 
 
