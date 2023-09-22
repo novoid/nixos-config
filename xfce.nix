@@ -58,7 +58,7 @@
     xfce.xfce4-verve-plugin
     emojione
     rofi
-    brightnessctl
+    brightnessctl ## 2023-09-17: with this in xfce.nix (not homemanager/xfce.nix!) I was asked for sudo password when pressing the buttons; moving it to homemanager/xfce.nix didn't help.
 
     # libsForQt514.oxygen-icons5 ## 2022-11-06 broken
     # ##################################################################
