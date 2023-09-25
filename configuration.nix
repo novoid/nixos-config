@@ -42,6 +42,7 @@
     enable = true;
     locate = pkgs.plocate;
     localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null.
+    interval = "hourly";
   };
 
   # Configure keymap in X11
