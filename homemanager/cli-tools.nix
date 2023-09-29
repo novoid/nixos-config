@@ -252,6 +252,7 @@ set -g status-keys emacs
         "open" = "xdg-open";
         "e" = "emacsclient";
         "pdf" = "okular";
+        "plvolleyball" = "grep ':ID: 2015-09-28-PL-Volleyball' -A 17  ~/org/notes.org|tail -n 16";
       };
     }; # zsh
 
