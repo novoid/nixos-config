@@ -187,7 +187,7 @@ set -g status-keys emacs
 
 
       '';
-  }; # tmux
+  }; # end of tmux
 
   # FIXXME: currently trying to accomplish: replace "floyd" with the current hostname in the following line:
 
@@ -231,7 +231,7 @@ set -g status-keys emacs
       #  terminal.autoTitle = false;
       #  pmodules = [ "git" "completion" "syntax-highlighting" "tmux" ];
       #};
-      
+
       history = {
         share = true; # false -> every terminal has it's own history
         size = 9999999; # Number of history lines to keep.
@@ -239,22 +239,55 @@ set -g status-keys emacs
         ignoreDups = true; # Do not enter command lines into the history list if they are duplicates of the previous event.
         extended = true; # Save timestamp into the history file.
       };
-      
+
+      ## dirHashes → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.dirHashes
+      dirHashes = {
+      };
+
+      ## shellAliases → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.shellAliases
       shellAliases = {
-        "ls" = "lsd";
+        #"ls" = "lsd";
         "l" = "lsd -la";
         "any" = "ps xauwww|grep -v grep|grep";
         "dl" = "ls -lhtr --color=always ~/Downloads | tail -n 10"; # Show the 10 newest Downloads
         "o" = "less";
         "gg" = "git grep";
         "m" = "mpv";
-        "s" = "tmux a";
+        "s" = "tmux a"; # reminiscence to good old GNU screen ;-)
         "open" = "xdg-open";
         "e" = "emacsclient";
         "pdf" = "okular";
-        "plvolleyball" = "grep ':ID: 2015-09-28-PL-Volleyball' -A 17  ~/org/notes.org|tail -n 16";
+        "plvolleyball" = "grep ':ID: 2015-09-28-PL-Volleyball' -A 17  ~/org/notes.org | tail -n 16";
       };
-    }; # zsh
+
+      # extra entries for .zshrc → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.initExtra
+      initExtra = ''
+
+          risetransfer () {
+              ## works only from within the VPN!
+              if [ $# -eq 0 ]; then
+                  echo "No arguments specified.\nUsage:\n  transfer <file|directory>\n  ... | transfer <file_name>">&2;
+                  return 1;
+              fi;
+              if tty -s; then
+                  file="$1";
+                  file_name=$(basename "$file");
+                  if [ ! -e "$file" ];
+                  then echo "$file: No such file or directory">&2;
+                       return 1;
+                  fi;
+                  if [ -d "$file" ];
+                  then file_name="$file_name.zip" ,;
+                       (cd "$file"&&zip -r -q - .) | curl --progress-bar --upload-file "-" "https://transfer.risedev.at/$file_name" | tee /dev/null,;
+                  else cat "$file" | curl --progress-bar --upload-file "-" "https://transfer.risedev.at/$file_name" | tee /dev/null;
+                  fi;
+              else file_name=$1;
+                   curl --progress-bar --upload-file "-" "https://transfer.risedev.at/$file_name" | tee /dev/null;
+              fi;
+      }
+      '';
+      
+    }; # end of zsh
 
 
     programs.git = {
@@ -267,7 +300,7 @@ set -g status-keys emacs
         co = "checkout";
         s = "status";
       };
-    }; # git
+    }; # end of git
 
   
 
