@@ -284,7 +284,9 @@ set -g status-keys emacs
               else file_name=$1;
                    curl --progress-bar --upload-file "-" "https://transfer.risedev.at/$file_name" | tee /dev/null;
               fi;
-      }
+                 }
+
+      REPORTTIME=5
       '';
       
     }; # end of zsh
