@@ -45,6 +45,8 @@
       (callPackage ../pkgs/xdu.nix {})
 
       qpwgraph ## pipewire tool
+
+      openai-whisper ## https://github.com/openai/whisper
       
     ];
 
