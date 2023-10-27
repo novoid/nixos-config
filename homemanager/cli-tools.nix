@@ -101,6 +101,7 @@
       wdiff
       diffpdf
       diffutils
+      delta # "A syntax-highlighting pager for git" https://github.com/dandavison/delta
       
       # search
       silver-searcher
