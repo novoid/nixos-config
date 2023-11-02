@@ -74,6 +74,7 @@
       # ssh
       sshuttle
       ssh-askpass-fullscreen
+      autossh
  
       # text UI
       dialog
@@ -127,6 +128,8 @@
       youtube-dl
       jq ## used for yth.sh
       magic-wormhole
+
+      jre_minimal ## minimal Java environment (including keytool)
     ];
 
 
