@@ -129,7 +129,8 @@
       jq ## used for yth.sh
       magic-wormhole
 
-      jre_minimal ## minimal Java environment (including keytool)
+      #jre_minimal ## minimal Java environment (including keytool); 2023-11-03 this JRE caused: "Error: Unable to initialize main class net.sourceforge.plantuml.Run" → "Caused by: java.lang.NoClassDefFoundError: java/awt/Graphics"
+      openjdk17-bootstrap ## because "jre_minimal" caused: "Error: Unable to initialize main class net.sourceforge.plantuml.Run" → "Caused by: java.lang.NoClassDefFoundError: java/awt/Graphics"
     ];
 
 
