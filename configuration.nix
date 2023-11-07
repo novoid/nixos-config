@@ -43,6 +43,8 @@
     locate = pkgs.plocate;
     localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null.
     interval = "hourly";
+    pruneNames = [ "s" "tagtrees" "tagtrees-default1" "tagtrees-default2" ]; # do not scan directories of that name: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
+    prunePaths = [ "/home/sd" ]; # do not scan those absolute paths: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
   };
 
   # Configure keymap in X11
