@@ -263,6 +263,7 @@ set -g status-keys emacs
         "e" = "emacsclient";
         "pdf" = "okular";
         "plvolleyball" = "grep ':ID: 2015-09-28-PL-Volleyball' -A 17  ~/org/notes.org | tail -n 16";
+        "vidir" = "vidir -s"; # because of id:2023-11-10-fix-wrong-order-in-vidir
       };
 
       # extra entries for .zshrc → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.initExtra
