@@ -104,6 +104,11 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "vk"; # SPECIFICTOKARL
 
+  ## 2023-11-17: from https://github.com/ryan4yin/nix-config/blob/d624ab43233a8868410c1901f722ac81cc15a5dd/modules/nixos/core-desktop.nix#L48
+  ##   android development tools, this will install adb/fastboot and other android tools and udev rules
+  ##   see https://github.com/NixOS/nixpkgs/blob/nixos-unstable/nixos/modules/programs/adb.nix
+  programs.adb.enable = true;  ## FIXXME: limit only to hosts that include homemanager/desktop-GUI-tools.nix
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
