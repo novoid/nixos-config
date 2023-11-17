@@ -47,6 +47,8 @@
       qpwgraph ## pipewire tool
 
       openai-whisper ## https://github.com/openai/whisper
+      scrcpy ## Android screen content → desktop https://scrcpy.org/
+      android-tools ## mkbootimg avbtool lpunpack mkdtboimg simg2img img2simg lpadd lpdump unpack_bootimg lpmake append2simg mke2fs.android lpflash repack_bootimg ext2simg e2fsdroid adb fastboot
       
     ];
 
