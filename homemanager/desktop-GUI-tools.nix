@@ -50,7 +50,8 @@
       scrcpy ## Android screen content → desktop https://scrcpy.org/
       android-tools ## mkbootimg avbtool lpunpack mkdtboimg simg2img img2simg lpadd lpdump unpack_bootimg lpmake append2simg mke2fs.android lpflash repack_bootimg ext2simg e2fsdroid adb fastboot
       android-udev-rules
-      
+
+      blanket ## Noisli for the desktop: https://apps.gnome.org/Blanket/ → listen to different background sounds like birds, ocean, rain, ...
     ];
 
 }
