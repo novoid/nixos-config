@@ -191,8 +191,8 @@
       
       xfce4-screensaver = { # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
-        "/lock/saver-activation/delay" = 2;
-        "/lock/saver-activation/enabled" = false;
+        "/lock/saver-activation/delay" = 10;
+        "/lock/saver-activation/enabled" = true;
         "/lock/user-switching/enabled" = false;
         #"/lock/enabled" = true; # Enable Lock Screen
         # FIXXME: trying to find the correct syntax for setting the lock screen boolean according to "my.isvm":
