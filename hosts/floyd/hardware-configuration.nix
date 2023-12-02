@@ -24,6 +24,8 @@
     [ { device = "/dev/disk/by-uuid/2e4ef339-0e3b-4554-b187-854ae380e052"; }
     ];
 
+  boot.resumeDevice = "/dev/disk/by-label/swap"; # 2023-12-02: required https://nixos.org/manual/nixos/stable/release-notes#sec-release-23.11 -> "boot.resumeDevice must be specified when hibernating if not in EFI mode."
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
