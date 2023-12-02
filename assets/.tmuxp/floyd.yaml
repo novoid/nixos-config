@@ -5,14 +5,14 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos
+  start_directory: /home/vk/nixos
   window_name: nix1
 - focus: 'true'
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-  start_directory: /home/vk/src/nixos
+  start_directory: /home/vk/nixos
   window_name: nix2
 - focus: 'true'
   options:
