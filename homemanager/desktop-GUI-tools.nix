@@ -52,6 +52,7 @@
       android-udev-rules
 
       blanket ## Noisli for the desktop: https://apps.gnome.org/Blanket/ → listen to different background sounds like birds, ocean, rain, ...
+      libretranslate  # standalone dictionary service: need to invoke "libretranslate" in a shell in order to download language models.
     ];
 
 }
