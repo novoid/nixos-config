@@ -94,7 +94,7 @@
       }; # end floyd
 
 
-      rise = nixpkgs.lib.nixosSystem { # SPECIFICTOKARL
+      jackson = nixpkgs.lib.nixosSystem { # SPECIFICTOKARL
         system = "x86_64-linux";
 
         modules = [
@@ -102,7 +102,7 @@
         	  system.stateVersion = "23.05"; # Did you read the comment?
 	        }
           nixos-hardware.nixosModules.lenovo-thinkpad-t490
-          ./hosts/rise
+          ./hosts/jackson
           ./configuration.nix
           # FIXXME: gpt4all.nixosModules.gpt4all-chat  ## 2023-09-06 fails with: "error: attribute 'nixosModules' missing"
           
@@ -144,7 +144,7 @@
                  };
           }) # end home-manager
         ]; # end modules
-      }; # end rise
+      }; # end jackson
 
 
       

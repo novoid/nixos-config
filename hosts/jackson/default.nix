@@ -26,7 +26,7 @@
   boot.initrd.luks.devices."luks-f6d1fc7a-beb0-452b-a789-d870c085f071".keyFile = "/crypto_keyfile.bin";
 
 
-  networking.hostName = "rise"; # Define your hostname.
+  networking.hostName = "jackson"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -168,7 +168,7 @@
       # folders = {
       #   "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
       #     path = "/home/vk/nixos";    # Which folder to add to Syncthing
-      #     devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
+      #     devices = [ "karl-voit.at" "sting" "jackson" ];      # Which devices to share the folder with
       #   };
       #  
       # }; # folders

@@ -79,7 +79,7 @@
       overrideFolders = false;     # overrides any folders added or deleted through the WebUI
       devices = {
         "sting" = { id = "GDIGF5G-ZPMAKBL-JQO6SXC-N322AAE-ENNGEDL-BPBZBTT-NFYXJ5M-SWHZYA7"; };
-        "rise" = { id = "WJVLRCX-Q65XSAL-4DHPZLY-QHAXAEP-MU3FMDH-UHT5Q53-7T3UCQP-MWWJKAM"; };
+        "jackson" = { id = "WJVLRCX-Q65XSAL-4DHPZLY-QHAXAEP-MU3FMDH-UHT5Q53-7T3UCQP-MWWJKAM"; };
         "karl-voit.at" = { id = "TPKSMZI-FUNRWLY-PND3NID-DPWM3RH-PP2W5ID-3MYSLQQ-MMLSIPP-ZIUHSAH"; };
         #"floyd" = { id = "HJUQBBS-PZ5PVX2-O737FMQ-6SOR2PM-5H2EHIM-FGLR4NT-EZNWRFX-S6NQXAB"; };
         #"" = { id = ""; };
@@ -89,7 +89,7 @@
         "nixos-configuration" = {        # Name of folder in Syncthing, also the folder ID
           id = "nixos-configuration";
           path = "/home/vk/nixos";    # Which folder to add to Syncthing
-          devices = [ "karl-voit.at" "sting" "rise" ];      # Which devices to share the folder with
+          devices = [ "karl-voit.at" "sting" "jackson" ];      # Which devices to share the folder with
         };
        
       };

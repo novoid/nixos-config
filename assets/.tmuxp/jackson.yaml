@@ -1,0 +1,33 @@
+session_name: 'rise vk'
+windows:
+- focus: 'true'
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  start_directory: /home/vk/tmp/2del
+  window_name: 2del
+- start_directory: /home/vk
+  window_name: sting
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+- start_directory: /home/vk/Downloads
+  window_name: Downloads
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+- start_directory: /home/vk/share/netvideos
+  window_name: netvideos
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+- start_directory: /home/vk/nixos
+  window_name: NixOS
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
