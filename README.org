@@ -6,13 +6,7 @@ repository and its goals.
 
 ** Basic Concept
 
-My setup is using the =flake.nix= as a central point. As you can see
-in =nixos-rebuild_switch_flake.sh=, I do update my setup using the
-command:
-
-: sudo nixos-rebuild switch --flake /home/vk/nixos
-
-You may need to adapt the path to meet your path, of course.
+My setup is using the =flake.nix= as a central point.
 
 =flake.nix= is calling most of the other files depending on the set hostname:
 
@@ -23,9 +17,45 @@ You may need to adapt the path to meet your path, of course.
 The directory =assets= contain various configuration and binary files
 I wanted to keep close to my NixOS configuration files.
 
+** Wrapper Shell Scripts
+:PROPERTIES:
+:CREATED:  [2023-12-25 Mon 21:56]
+:END:
+
+I wrote several shell scripts so that I don't have to remember the
+commands for updating and so forth.
+
+you can update the setup using =nixos-rebuild_switch_flake.sh= which
+basically invokes the command:
+
+: sudo nixos-rebuild switch --flake /home/vk/nixos
+
+In practice, I'm using =nh-os-switch.sh= to update my setup to meet
+the stored configuration. This is a visually appealing wrapper that is
+using [[https://github.com/viperML/nh][nh]] to run:
+
+: nh os switch --ask "/home/vk/nixos"
+
+You may need to adapt the paths to meet your path, of course.
+
+You should start with the =nixos-rebuild= command and then optionally
+switch to =nh= when everything is working so far.
+
+=update-flake.sh= is updating the flake definitions to the most
+current ones and commit them to the git repository. Therefore, as long
+as you don't invoke this command, no package updates will be
+downloaded from the remote repositories.
+
+From time to time, you may want to invoke =garbage-collecting.sh= to
+get rid of older data which is not required any more.
+=configuration.nix= also contains a weekly garbage collection but I'm
+not sure when and how this is invoked. If you need more space at a
+certain point in time, you're save to invoke =garbage-collecting.sh=
+any time.
+
 ** Hosts
 
-As of 2023-09-16, I do have four different hosts running this NixOS configuration:
+As of 2023-12-25, I do have four different hosts running this NixOS configuration:
 
 *jackson* is my business notebook (Lenovo T490) which I'm using during a
 business week. This is the most intensly used NixOS system at the
