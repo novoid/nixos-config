@@ -15,7 +15,6 @@
     python3Packages.pandas
     virtualenv
     sass
-    zlib
   ];
 
 }

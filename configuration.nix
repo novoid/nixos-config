@@ -141,7 +141,8 @@
 
     gnupg1
     pinentry-gtk2
-    
+    zlib
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
