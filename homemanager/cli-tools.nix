@@ -11,7 +11,6 @@
       lsd  # https://github.com/Peltoche/lsd + German: https://www.heise.de/news/LSD-in-der-Kommandozeile-GNU-List-Befehl-in-Rust-und-Farbe-9287119.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag
       #eza ## FIXXME 2023-09-07: eza.url defined in flake.nix but I don't know how to install it here yet.
       psmisc ## e.g., killall, fuser, pstree
-      fwupd ## fwupdmgr
       
       # system administration
       htop

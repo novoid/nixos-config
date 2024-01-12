@@ -142,6 +142,7 @@
     gnupg1
     pinentry-gtk2
     zlib
+    fwupd ## fwupdmgr
 
   ];
 
@@ -164,6 +165,8 @@
     
   };
 
+
+  services.fwupd.enable = true; # required for fwupd according to https://github.com/NixOS/nixpkgs/issues/60619
   
 #programs.git = {
 #  enable = true;
