@@ -111,6 +111,7 @@
       findutils
       zsh-z  # https://github.com/agkozak/zsh-z -> "Zsh-z is a native Zsh port of rupa/z, a tool written for bash and Zsh that uses embedded awk scripts to do the heavy lifting."
       rdfind
+      ripgrep
 
       # email
       mutt
