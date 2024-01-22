@@ -4,6 +4,8 @@
 
     home.packages = with pkgs; [
 
+      corefonts  # Microsoft TTF core fonts
+      
       signal-desktop
       
       libreoffice
