@@ -124,6 +124,8 @@
       aspell aspellDicts.de aspellDicts.en aspellDicts.en-computers
      
       ocrmypdf
+      poppler_utils
+      
       yt-dlp
       youtube-dl
       jq ## used for yth.sh
