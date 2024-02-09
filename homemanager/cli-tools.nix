@@ -137,6 +137,8 @@
       openjdk17-bootstrap ## because "jre_minimal" caused: "Error: Unable to initialize main class net.sourceforge.plantuml.Run" → "Caused by: java.lang.NoClassDefFoundError: java/awt/Graphics"
 
       yubikey-manager # "ykman" for managing Yubikeys and their PINs and so forth
+
+      libfaketime # faketime for debugging gpg issues
     ];
 
 
