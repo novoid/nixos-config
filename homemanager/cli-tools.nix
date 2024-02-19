@@ -139,6 +139,8 @@
       yubikey-manager # "ykman" for managing Yubikeys and their PINs and so forth
 
       libfaketime # faketime for debugging gpg issues
+
+      gnumake
     ];
 
 
