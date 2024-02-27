@@ -14,7 +14,7 @@
       hunspellDicts.en_US-large
 
 #      subsurface
-      freemind
+      #freemind # 2024-02-27: disabled; use with nix-shell -p
       hyphen
       keepassxc
       lbdb

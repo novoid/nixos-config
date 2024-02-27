@@ -6,7 +6,7 @@
 
     firefox
     ungoogled-chromium
-    nyxt
+    # nyxt # 2024-02-27: disabled; use with nix-shell -p
     tor
     torsocks
     tor-browser-bundle-bin
