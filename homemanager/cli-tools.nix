@@ -141,6 +141,8 @@
       libfaketime # faketime for debugging gpg issues
 
       gnumake
+
+      v4l-utils # V4L utils and libv4l, provide common image formats regardless of the v4l device
     ];
 
 
