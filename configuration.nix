@@ -12,6 +12,10 @@
   ## https://nixos.wiki/wiki/Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  ## "This option makes the system much more usable when building. Highly recommended on a desktop system."
+  ## Source: https://graz.social/@nebucatnetzer@emacs.ch/112196563631954971 and https://git.2li.ch/Nebucatnetzer/nixos/src/commit/9f428ac27185c624141ae7dee52f3d2856802f13/modules/misc/common/default.nix#L117
+  nix.daemonCPUSchedPolicy = "idle";
+
   ## 2023-07-22 https://graz.social/@pimeys@social.nauk.io/110757634337893588 -> https://github.com/pimeys/nixos/blob/main/core/default.nix#L73
   ## save space by enabling hard links in the nix store (not a default); And running the optimization once after enabling this setting by doing nix-store --optimise (can take a while). 50-100GB saved right there…
   ## docu: https://nixos.wiki/wiki/Storage_optimization
