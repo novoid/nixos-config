@@ -198,6 +198,18 @@
 #
 #    };
 
+  # https://nixos.wiki/wiki/Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = false; # if true: powers up the default Bluetooth controller on boot
+  services.blueman.enable = true; # for pairing: enables the blueman service, which provides blueman-applet and blueman-manager
+  
+  # https://nixos.wiki/wiki/Bluetooth → Using Bluetooth headset buttons to control media player
+  systemd.user.services.mpris-proxy = {
+    description = "Mpris proxy";
+    after = [ "network.target" "sound.target" ];
+    wantedBy = [ "default.target" ];
+    serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+  };
 
-
+  
 }
