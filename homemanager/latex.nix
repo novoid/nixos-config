@@ -15,6 +15,7 @@
     pstoedit
     dot2tex
     xfig
+    ghostscript_headless # used for ps2pdf (for INSO slides)
 
   ];
 
