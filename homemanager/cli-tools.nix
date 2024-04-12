@@ -86,6 +86,7 @@
       # git
       tig
       git
+      git-lfs
       
       # compression/decompression tools
       zip
