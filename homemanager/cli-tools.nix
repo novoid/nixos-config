@@ -74,6 +74,7 @@
       sshuttle
       ssh-askpass-fullscreen
       autossh
+      openssl
  
       # text UI
       dialog
