@@ -47,7 +47,7 @@
     locate = pkgs.plocate;
     localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null.
     interval = "hourly";
-    pruneNames = [ "s" "tagtrees" "tagtrees-default1" "tagtrees-default2" ]; # do not scan directories of that name: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
+    pruneNames = [ "docdata" "s" "tagtrees" "tagtrees-default1" "tagtrees-default2" ]; # do not scan directories of that name: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
     prunePaths = [ "/home/sd" ]; # do not scan those absolute paths: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
   };
 
@@ -198,18 +198,6 @@
 #
 #    };
 
-  # https://nixos.wiki/wiki/Bluetooth
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = false; # if true: powers up the default Bluetooth controller on boot
-  services.blueman.enable = true; # for pairing: enables the blueman service, which provides blueman-applet and blueman-manager
-  
-  # https://nixos.wiki/wiki/Bluetooth → Using Bluetooth headset buttons to control media player
-  systemd.user.services.mpris-proxy = {
-    description = "Mpris proxy";
-    after = [ "network.target" "sound.target" ];
-    wantedBy = [ "default.target" ];
-    serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
-  };
 
-  
+
 }
