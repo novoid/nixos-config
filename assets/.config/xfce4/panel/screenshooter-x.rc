@@ -8,7 +8,7 @@ screenshot_dir=file:///home/vk/tmp/2del/
 
 action=3
 # action=2 -> active window
-# action=3 -> 
+# action=3 -> active window
 
 delay=0
 region=2
