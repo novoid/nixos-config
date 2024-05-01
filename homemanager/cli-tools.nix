@@ -35,6 +35,7 @@
       acpi
       rsync
       traceroute
+      arp-scan
       util-linux
       vpnc
       ssdeep # Computes context triggered piecewise hashes (fuzzy hashes)
