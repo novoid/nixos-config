@@ -82,6 +82,7 @@
                           #./homemanager/torrent.nix
                           
                           #./homemanager/notebooks.nix
+                          ./homemanager/gaming.nix
                       ]
                       ++ (lib.optional config.my.isnotebook ./homemanager/notebooks.nix)
                       # ALTERNATIVE:
