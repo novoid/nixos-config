@@ -156,7 +156,8 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "gtk2"; 
+    #pinentryFlavor = "gtk2"; ## 2024-06-01: not available with NixOS 24.05 any more
+    pinentryPackage= pkgs.pinentry-gtk2; 
   };
   services.pcscd.enable = true;  
   ## 2023-09-04: in order to avoid "No pinentry program" see also setting for home.file.".gnupg/gpg-agent.conf" in cli-tools.nix!
