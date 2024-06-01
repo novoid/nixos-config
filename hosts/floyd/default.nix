@@ -69,7 +69,7 @@
     xkbVariant = "intl";
   };
 
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -97,6 +97,8 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  hardware.bluetooth.enable = true;
+    
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.vk = {
     isNormalUser = true;
