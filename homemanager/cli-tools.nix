@@ -343,6 +343,7 @@ set -g status-keys emacs
         osd-on-seek = "msg-bar";
         keep-open = "yes";
         script-opts = "ytdl_hook-ytdl_path=/usr/local/bin/yt-dlp;";
+        title = "mpv - \${filename}";
       };
 
       
