@@ -38,6 +38,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Firewall https://nixos.wiki/wiki/Firewall
+  #   Warning: Firewall rules may be overwritten by Docker, as per https://github.com/NixOS/nixpkgs/issues/111852
+  networking.firewall = {
+    enable = true;
+    #  allowedTCPPorts = [ 80 443 ];
+    #  allowedUDPPortRanges = [
+    #    { from = 4000; to = 4007; }
+    #    { from = 8000; to = 8010; }
+    #  ];
+    # interfaces."eth0".allowedTCPPorts = [ 80 443 ];  # Interface-specific firewall rules
+  };
+  
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
@@ -131,7 +143,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
+   services.openssh.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
