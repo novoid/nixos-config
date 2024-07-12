@@ -130,7 +130,7 @@
       poppler_utils
       
       yt-dlp
-      youtube-dl
+      # youtube-dl 2024-07-12: unmaintained!
       jq ## used for yth.sh
       magic-wormhole
       pdfminer  # e.g. for pdf2txt dumppdf
