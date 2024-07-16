@@ -155,11 +155,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1720955489,
-        "narHash": "sha256-ImrglsCCb6qJlCIbAWlHsN23fAgdoU/igkg9MaS+KLo=",
+        "lastModified": 1721120803,
+        "narHash": "sha256-YgVdFBAXACtZi5oal7rStfuJwbnL8vDwCT8UnznKh5c=",
         "owner": "NixOS",
         "repo": "nix",
-        "rev": "9d7397c4ba5f8ebcc0b7f463562c275455a7f150",
+        "rev": "9c6678da0e282980be648787d5fe0166dcab945c",
         "type": "github"
       },
       "original": {
