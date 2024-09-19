@@ -135,6 +135,7 @@
       magic-wormhole
       pdfminer  # e.g. for pdf2txt dumppdf
       qpdf  # e.g. splitting pdf files
+      pdfannots  # Extracts and formats text annotations from a PDF file (MD)
       
       #jre_minimal ## minimal Java environment (including keytool); 2023-11-03 this JRE caused: "Error: Unable to initialize main class net.sourceforge.plantuml.Run" → "Caused by: java.lang.NoClassDefFoundError: java/awt/Graphics"
       openjdk17-bootstrap ## because "jre_minimal" caused: "Error: Unable to initialize main class net.sourceforge.plantuml.Run" → "Caused by: java.lang.NoClassDefFoundError: java/awt/Graphics"
