@@ -25,6 +25,7 @@
       pdftk
       pgf
       pdfpc  # PDF presentation tool
+      pdfarranger # Small python-gtk application, which helps the user to merge or split PDF documents and rotate, crop and rearrange their pages using an interactive and intuitive graphical interface.  https://github.com/pdfarranger/pdfarranger
 #      gnuplot
       recode
       smartmontools
