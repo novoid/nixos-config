@@ -12,6 +12,8 @@
       openvpn networkmanager-openvpn gnome.networkmanager-openvpn
       
       emacsPackages.helm-org-ql emacsPackages.helm-org emacsPackages.helm-org-rifle 
+
+      nextcloud-client
     ];
 
 
