@@ -59,6 +59,8 @@
       languagetool # text correction framework for multiple languages incl. tray app
 
       librewolf # privacy-friendly firefox
+
+      localsend
     ];
 
 }
