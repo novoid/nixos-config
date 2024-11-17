@@ -82,7 +82,7 @@
                           #./homemanager/torrent.nix
                           
                           #./homemanager/notebooks.nix
-                          ./homemanager/gaming.nix
+                          #./homemanager/gaming.nix  ## 2024-11-17 disabled doe to issues with compiling of retroarch
                       ]
                       ++ (lib.optional config.my.isnotebook ./homemanager/notebooks.nix)
                       # ALTERNATIVE:
