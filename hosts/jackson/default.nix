@@ -212,6 +212,4 @@
 # 2023-09-08: script broken, needs fixing first #    };
 # 2023-09-08: script broken, needs fixing first #  };
 
-  
-  
 }
