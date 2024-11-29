@@ -44,7 +44,7 @@
 
   services.locate = {
     enable = true;
-    locate = pkgs.plocate;
+    package = pkgs.plocate;
     localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null.
     interval = "hourly";
     pruneNames = [ "docdata" "s" "tagtrees" "tagtrees-default1" "tagtrees-default2" ]; # do not scan directories of that name: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
@@ -53,9 +53,11 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
+    xkb.layout = "us";
+    xkb.variant = "intl";
+    xkb.options = "ctrl:nocaps"; # Configure keymap in X11
   };
+
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -105,8 +107,8 @@
   programs.zsh.enable = true; # FIXXME: is this redundant to the programs.zsh = {}?
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "vk"; # SPECIFICTOKARL
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "vk"; # SPECIFICTOKARL
 
   ## 2023-11-17: from https://github.com/ryan4yin/nix-config/blob/d624ab43233a8868410c1901f722ac81cc15a5dd/modules/nixos/core-desktop.nix#L48
   ##   android development tools, this will install adb/fastboot and other android tools and udev rules
@@ -163,13 +165,6 @@
   ## 2023-09-04: in order to avoid "No pinentry program" see also setting for home.file.".gnupg/gpg-agent.conf" in cli-tools.nix!
   
   # List services that you want to enable:
-
-  
-  services.xserver = {
-    xkbOptions = "ctrl:nocaps"; # Configure keymap in X11
-    
-  };
-
 
   services.fwupd.enable = true; # required for fwupd according to https://github.com/NixOS/nixpkgs/issues/60619
   

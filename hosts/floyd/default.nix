@@ -63,12 +63,6 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
-  };
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure console keymap
@@ -111,8 +105,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "vk";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "vk";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

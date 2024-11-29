@@ -75,12 +75,6 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
-  };
-
   # Configure console keymap
   console.keyMap = "us-acentos";
 
@@ -119,8 +113,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "vk";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "vk";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -170,7 +164,7 @@
       configDir = "/home/vk/.config/syncthing";
       overrideDevices = false;     # overrides any devices added or deleted through the WebUI
       overrideFolders = false;     # overrides any folders added or deleted through the WebUI
-      devices = {
+      settings.devices = {
         "sting" = { id = "GDIGF5G-ZPMAKBL-JQO6SXC-N322AAE-ENNGEDL-BPBZBTT-NFYXJ5M-SWHZYA7"; };
         "karl-voit.at" = { id = "TPKSMZI-FUNRWLY-PND3NID-DPWM3RH-PP2W5ID-3MYSLQQ-MMLSIPP-ZIUHSAH"; };
         #"floyd" = { id = "HJUQBBS-PZ5PVX2-O737FMQ-6SOR2PM-5H2EHIM-FGLR4NT-EZNWRFX-S6NQXAB"; };
