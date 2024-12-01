@@ -156,7 +156,7 @@
       configDir = "/home/vk/.config/syncthing";
       overrideDevices = false;     # overrides any devices added or deleted through the WebUI
       overrideFolders = false;     # overrides any folders added or deleted through the WebUI
-      devices = {
+      settings.devices = {
         "sting" = { id = "GDIGF5G-ZPMAKBL-JQO6SXC-N322AAE-ENNGEDL-BPBZBTT-NFYXJ5M-SWHZYA7"; };
         "jackson" = { id = "WJVLRCX-Q65XSAL-4DHPZLY-QHAXAEP-MU3FMDH-UHT5Q53-7T3UCQP-MWWJKAM"; };
         "karl-voit.at" = { id = "TPKSMZI-FUNRWLY-PND3NID-DPWM3RH-PP2W5ID-3MYSLQQ-MMLSIPP-ZIUHSAH"; };
