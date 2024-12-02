@@ -17,7 +17,7 @@
     xfce.enable = true;
   };
 
-  services.gnome-keyring.enable = true; ## 2023-09-03: on HM level the option is `services.gnome-keyring...'
+  services.gnome.gnome-keyring.enable = true; ## 2023-09-03: on HM level the option is `services.gnome-keyring...'
 
   environment.systemPackages = with pkgs; [
 
