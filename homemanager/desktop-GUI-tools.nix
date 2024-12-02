@@ -42,7 +42,7 @@
       element-desktop # Matrix-client
       xorg.xeyes
       dosbox
-      gnome.gnome-terminal
+      gnome-terminal
       libnotify
 
       (callPackage ../pkgs/xdu.nix {})

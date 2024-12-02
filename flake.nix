@@ -21,9 +21,9 @@
   };
 
   inputs = {
-    nixpkgs.url        = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url        = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs"; ## from https://thiscute.world/en/posts/nixos-and-flake-basics/
     gpt4all.url = "github:polygon/gpt4all-nix"; ## 2023-09-06 https://github.com/polygon/gpt4all-nix ; example use-case in config: https://github.com/search?q=repo%3AWhiteBlackGoose%2Fdotfiles%20gpt4all&type=code
     nh = {  ## https://github.com/viperML/nh

@@ -65,7 +65,7 @@
   systemd.sleep.extraConfig = "HibernateDelaySec=30m"; # from: https://github.com/NixOS/nixos-hardware/issues/672
   
   # Enable sound with pipewire.
-  sound.enable = true;
+  # not necessary with 24.11: sound.enable = true;
   hardware.pulseaudio.enable = false; ## 2023-09-04: needs to be false when using pipewire
   security.rtkit.enable = true;
   services.pipewire = {

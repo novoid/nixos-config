@@ -19,7 +19,7 @@
   home.packages = with pkgs; [
 
     emacs
-    emacs28Packages.use-package
+    emacs28.pkgs.use-package
     pandoc
     imagemagick
     plantuml

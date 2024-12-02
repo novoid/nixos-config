@@ -21,7 +21,7 @@
     enable = true;
     theme = {
       name = "Adwaita";
-      package = pkgs.gnome3.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
     };
   };
 
