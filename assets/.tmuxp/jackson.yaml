@@ -31,3 +31,9 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
+- start_directory: /home/vk/rise/gem/epa/rb/rise-betrieb-public-keys
+  window_name: rb-pubkeys
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
