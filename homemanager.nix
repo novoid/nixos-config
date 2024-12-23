@@ -15,7 +15,7 @@
     inputs.nh.packages.${pkgs.system}.default
   ];
 
-  home.sessionVariables.FLAKE = "/home/vk/nixos"; ## for nh
+  home.sessionVariables.NH_FLAKE = "/home/vk/nixos"; ## for nh; 2024-12-23: changed "FLAKE" to "NH_FLAKE" because of https://github.com/viperML/nh/issues/199#issuecomment-2557575842
   
   gtk = {
     enable = true;
