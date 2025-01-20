@@ -259,6 +259,7 @@ set -g status-keys emacs
         save = 9999999; # Number of history lines to save.
         ignoreDups = true; # Do not enter command lines into the history list if they are duplicates of the previous event.
         extended = true; # Save timestamp into the history file.
+        ignoreSpace = true; # i.e. setopt HIST_IGNORE_SPACE → don't store commands prefixed with a space
       };
 
       ## dirHashes → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.dirHashes
