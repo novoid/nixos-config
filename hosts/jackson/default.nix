@@ -184,6 +184,30 @@
   ## networking.firewall.allowedTCPPorts = [ 8384 22000 ];
   ## networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      
+      ## https://linrunner.de/tlp/settings/battery.html
+      START_CHARGE_THRESH_BAT0 = 50; # battery charge level below which charging will begin when connecting the charger.
+      STOP_CHARGE_THRESH_BAT0 = 75; # battery charge level above which charging will stop while the charger is connected.
+      RESTORE_THRESHOLDS_ON_BAT=1; # enable restoring charge thresholds when AC is unplugged
+
+      # https://linrunner.de/tlp/settings/processor.html
+      CPU_SCALING_GOVERNOR_ON_AC = "performance"; # 
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+      # https://linrunner.de/tlp/settings/network.html
+      WOL_DISABLE="Y"; # Y → Disable Wake-on-LAN
+      
+      # https://linrunner.de/tlp/settings/usb.html
+      USB_EXCLUDE_PHONE = 1; # Exclude smartphones from autosuspend mode to enable charging:
+    };
+  };  
+  
 # 2023-09-08: script broken, needs fixing first #  ## id:2023-09-08-convert-cronjobs-to-systemd-timers
 # 2023-09-08: script broken, needs fixing first #  systemd.timers."jira-notify-high-prio" = {
 # 2023-09-08: script broken, needs fixing first #    wantedBy = [ "timers.target" ];
