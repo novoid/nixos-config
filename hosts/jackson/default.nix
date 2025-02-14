@@ -188,6 +188,8 @@
   services.tlp = {
     enable = true;
     settings = {
+
+      # Run `tlp fullcharge` to temporarily force full charge.
       
       ## https://linrunner.de/tlp/settings/battery.html
       START_CHARGE_THRESH_BAT0 = 50; # battery charge level below which charging will begin when connecting the charger.
