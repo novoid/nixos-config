@@ -197,10 +197,17 @@
       RESTORE_THRESHOLDS_ON_BAT=1; # enable restoring charge thresholds when AC is unplugged
 
       # https://linrunner.de/tlp/settings/processor.html
-      CPU_SCALING_GOVERNOR_ON_AC = "performance"; # 
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      ## availability on jackson: via "tlp-stat -p":
+      ## /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors = performance powersave
+      ## /sys/devices/system/cpu/cpu0/cpufreq/energy_performance_available_preferences = default performance balance_performance balance_power power 
+      #CPU_SCALING_GOVERNOR_ON_AC = "performance";  
+      #CPU_SCALING_GOVERNOR_ON_AC = "powersave"; # 2025-02-20: test to reduce fan noise -> works but is really slow :-(
+      #CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      #CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_powersave"; ## default according to the doc
+      #CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      #CPU_ENERGY_PERF_POLICY_ON_AC = "powersave"; # 2025-02-20: reduce fan noise -> works but is slow
+      #CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance"; # 2025-02-20: should be a good compromise (default according to doc)
+      # 2025-02-21: disabled this section because fan is running all the time -> I messed it up with those settings. Hoping that reboot resets to defaults without heavy fan noise.
 
       # https://linrunner.de/tlp/settings/network.html
       WOL_DISABLE="Y"; # Y → Disable Wake-on-LAN
