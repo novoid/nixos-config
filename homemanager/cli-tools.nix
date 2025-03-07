@@ -281,6 +281,7 @@ set -g status-keys emacs
         "pdf" = "okular";
         "plvolleyball" = "grep ':ID: 2015-09-28-PL-Volleyball' -A 17  ~/org/notes.org | tail -n 16";
         "j" = "echo \"https://meet.rise-world.com/$(tr -dc A-Za-z0-9 </dev/urandom | head -c 30; echo)\" | xclip -selection clipboard -out";  # generates random jitsi meet URLs
+        "doch" = "function _doch {   local last_hist=( $(fc -l -1) ); shift last_hist; eval \"sudo $last_hist\"}; _doch"
       };
 
       # extra entries for .zshrc → https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.initExtra
