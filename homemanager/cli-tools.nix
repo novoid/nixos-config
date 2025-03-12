@@ -45,6 +45,7 @@
       ncftp
       socat
       cryptsetup
+      tcpdump
 
       ## 2023-07-24: this doesn't work: → "error: syntax error, unexpected IF"
 #      if config.my.isnotebook; then
@@ -75,6 +76,7 @@
       sshuttle
       ssh-askpass-fullscreen
       autossh
+      openssh  # scp sftp ssh ssh-add ssh-agent ssh-copy-id ssh-keygen ssh-keyscan sshd
       openssl
  
       # text UI
