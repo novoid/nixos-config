@@ -14,6 +14,8 @@
       emacsPackages.helm-org-ql emacsPackages.helm-org emacsPackages.helm-org-rifle 
 
       nextcloud-client
+
+      citrix_workspace
     ];
 
 
