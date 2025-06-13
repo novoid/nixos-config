@@ -45,7 +45,7 @@
   services.locate = {
     enable = true;
     package = pkgs.plocate;
-    localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null.
+    #localuser = null; # why? → warning: mlocate and plocate do not support the services.locate.localuser option. updatedb will run as root. Silence this warning by setting services.locate.localuser = null. ## 2025-06-09: The services.locate.localuser option has been removed because support for findutils locate has been removed.
     interval = "hourly";
     pruneNames = [ "docdata" "s" "tagtrees" "tagtrees-default1" "tagtrees-default2" ]; # do not scan directories of that name: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html
     prunePaths = [ "/home/sd" ]; # do not scan those absolute paths: https://manpages.debian.org/testing/plocate/updatedb.conf.5.en.html

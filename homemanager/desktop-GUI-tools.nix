@@ -37,7 +37,7 @@
       nedit
       nix-output-monitor
 
-      okular
+      kdePackages.okular    #okular  ## 2025-06-09: The top-level okular alias has been removed.
 
       element-desktop # Matrix-client
       xorg.xeyes
@@ -45,7 +45,7 @@
       gnome-terminal
       libnotify
 
-      (callPackage ../pkgs/xdu.nix {})
+      # (callPackage ../pkgs/xdu.nix {}) ## 2025-06-09 disabled because it doesn't bild any more: id:2025-05-24-upgrade-to-NixOS-25-dot-05
 
       qpwgraph ## pipewire tool
 
