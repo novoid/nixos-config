@@ -66,7 +66,7 @@
   
   # Enable sound with pipewire.
   # not necessary with 24.11: sound.enable = true;
-  hardware.pulseaudio.enable = false; ## 2023-09-04: needs to be false when using pipewire
+  services.pulseaudio.enable = false; ## 2023-09-04: needs to be false when using pipewire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

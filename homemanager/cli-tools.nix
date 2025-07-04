@@ -14,6 +14,7 @@
       
       # system administration
       htop
+      btop
       dnsutils
       mtr  # network diagnostic
       mc  #midnight commander
@@ -289,7 +290,7 @@ set -g status-keys emacs
       };
 
       # extra entries for .zshrc → https://rycee.gitlab.io/home-manager/options.xhtml#opt-programs.zsh.shellAliases
-      initExtra = ''
+      initContent = ''
 
           risetransfer () {
               ## works only from within the VPN!
